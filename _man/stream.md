@@ -297,7 +297,7 @@ Una cosa da non fare mai, però, è di utilizzare la funzione `eof` all'interno 
 {% include_relative src/stream-eof.cpp %}
 ```
 
-Se fai leggere a questo programma un file che contenga i numeri: 10, 20 e 30, otterrai questo output: 
+Se fai leggere a questo programma un file che contiene i numeri: 10, 20 e 30, otterrai questo output: 
 
 ```
 > g++ src/cpp/stream-eof.cpp -o src/out/esempio
