@@ -445,8 +445,8 @@ La classe basic_ios ha delle funzioni membro booleane che tornano <code>true</co
   </tbody>
 </table>
 
-<p>Come vedremo dopo, queste funzioni permettono di interrompere la lettura o la scrittura di uno stream quando si verifica un errore o se si è raggiunta la fine del file.
-Una cosa da non fare mai, però, è di utilizzare la funzione <code>eof</code> all’interno di un ciclo <code>while</code> per la lettura di un file:</p>
+<p>Queste funzioni permettono di interrompere la lettura o la scrittura di uno stream quando si verifica un errore o se si è raggiunta la fine del file.
+Una cosa che non devi fare mai, però, è di utilizzare la funzione <code>eof</code> all’interno di un ciclo <code>while</code> per la lettura di un file:</p>
 
 <pre><code>/** 
  * @file src/stream-eof.cpp
@@ -462,6 +462,7 @@ using namespace std;
 int main(int argc, char** argv)
 {    
     ifstream testo;
+    int      n;
     
     /** apre il file in lettura */
     testo.open(argv[1]);
@@ -471,8 +472,6 @@ int main(int argc, char** argv)
         
         /** Utilizza eof per gestire il ciclo */
         while(!testo.eof()) {
-
-            int n;
 
             /** Legge un numero dal file */
             testo &gt;&gt; n;
@@ -501,7 +500,59 @@ int main(int argc, char** argv)
 30
 </code></pre>
 
-<!-- Spiegare perché sia un errore -->
+<p>L’errore si verifica perché il controllo della funzione <code>eof</code> avviene prima della quarta operazione di lettura, quando lo stream è ancora in stato <code>good</code>.
+Un modo migliore di gestire questi casi è di utilizzare la funzione <code>good</code>, che ci permette di verificare anche la corretta apertura del file:</p>
+
+<pre><code>/** 
+ * @file src/stream-good.cpp
+ * Gestione dell'I/O su file con gli stream.
+ */
+ 
+#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+
+using namespace std;
+
+
+int main(int argc, char** argv)
+{    
+    ifstream testo;
+    int      n;
+    
+    /** apre il file in lettura */
+    testo.open(argv[1]);
+    
+    /** 
+    *   Il ciclo si ripete fino a che non 
+    *   si verifica un errore
+    */
+    while(testo.good()) {
+
+        /** Legge un numero dal file */
+        testo &gt;&gt; n;
+
+        /** Si interrompe se il file è finito */
+        if(testo.eof()) break;
+        
+        /** Altrimenti, scrive il numero */
+        cout &lt;&lt; n &lt;&lt; endl;
+    }
+                
+    /** Chiude il file di input */
+    testo.close();
+    
+    return 0;
+}
+
+</code></pre>
+<p>Se compili ed esegui questo programma, ottieni il risultato corretto:</p>
+
+<pre><code>&gt; g++ src/cpp/stream-good.cpp -o src/out/esempio
+&gt; src/out/esempio src/cpp/stream-eof.txt        
+10
+20
+30
+</code></pre>
 
 <hr id="eccezioni" />
 
@@ -530,7 +581,6 @@ Perché tutto questo avvenga, il codice che genera l’errore deve essere racchi
 #include &lt;fstream&gt;
 
 using namespace std;
-
 
 int main(int argc, char** argv)
 {    
@@ -562,7 +612,7 @@ std::__1::ios_base::failure: ios_base::clear
 zsh: abort      src/out/esempio
 </code></pre>
 
-<p>Se però inseriamo il codice che apre il file in un blocco <code>try</code>/<code>catch</code> e definiamo un handler per la gestione degli errori in apertura dei file, il risultato sarà più controllato:</p>
+<p>Se però inseriamo il codice che apre il file in un blocco <code>try</code>/<code>catch</code> e definiamo un <em>handler</em> per la gestione degli errori in apertura dei file, il risultato sarà più controllato:</p>
 
 <pre><code>/** 
  * @file src/stream-eccezioni-2.cpp
@@ -669,6 +719,10 @@ public:
 <pre><code>/** 
  * @file src/stream-eccezioni-4.cpp
  * Programma di esempio per la gestione delle eccezioni.
+ * Richiede, in input, il numero di caratteri da leggere 
+ * e il path del file di input:
+ *
+ *    src/out/esempio &lt;n caratteri da leggere&gt; &lt;file di input&gt;
  */
  
 #include &lt;iostream&gt;
@@ -679,9 +733,10 @@ using namespace std;
 
 /** Codici e stringhe di errore */
 #define ERR_NONE          0
-#define ERR_FILE_NONE   -10
+#define ERR_PARAMETRI   -10
 #define ERR_FILE_OPEN   -20
-#define S_ERR_FILE_NONE "Definire un file di input"
+#define S_SINTASSI      "USO: esempio &lt;n caratteri&gt; &lt;path file&gt;"
+#define S_ERR_PARAMETRI "Errore nei parametri di input."
 #define S_ERR_FILE_OPEN "Impossibile aprire il file di input"
 
 /**
@@ -731,7 +786,7 @@ int main(int argc, char** argv)
         *   che il numero di caratteri da leggere.
         */
         if (argc &lt; 3) 
-            throw Eccezione(ERR_FILE_NONE, S_ERR_FILE_NONE);
+            throw Eccezione(ERR_PARAMETRI, S_ERR_PARAMETRI);
             
         /** Definisce il numero di caratteri da leggere */
         int da_leggere = atoi(argv[1]);
@@ -780,8 +835,11 @@ int main(int argc, char** argv)
     } catch (Eccezione e) {
 
         /** Stampa a video l'eccezione */
-        cerr &lt;&lt; e;
+        cerr &lt;&lt; e &lt;&lt; endl;
 
+        /** Mostra la sintassi di chiamata **/
+        cerr &lt;&lt; S_SINTASSI &lt;&lt; endl;
+        
         /** Esce con un codice di errore */
         exit(e.getCodice());
     }
@@ -791,81 +849,112 @@ int main(int argc, char** argv)
 
 </code></pre>
 
+<p>Se compili ed esegui questo codice, otterrai il seguente output, a seconda dei parametri forniti:</p>
+
+<pre><code>&gt; g++ src/cpp/stream-eccezioni-4.cpp -o src/out/esempio
+&gt; src/out/esempio                                      
+-10: Errore nei parametri di input.
+USO: esempio &lt;n caratteri&gt; &lt;path file&gt;
+
+&gt; src/out/esempio 41                                   
+-10: Errore nei parametri di input.
+USO: esempio &lt;n caratteri&gt; &lt;path file&gt;
+
+&gt; src/out/esempio 41 src/cpp/stream-input.txt          
+Nacqui da famiglia ricca, ma troppo tardi
+
+&gt; src/out/esempio 0 src/cpp/stream-input.txt 
+Nacqui da famiglia ricca, ma troppo tardi.  
+Secondogenito, vidi la florida impresa paterna andare in dote  
+per diritto di nascita, ma anche per naturale inclinazione
+ai miei monozigotici fratelli maggiori e, com'è consuetudine 
+per i figli cadetti, fui avviato alla vita monastica.
+Entrai in seminario all'età di nove anni e presi i voti il 
+giorno del mio diciottesimo compleanno.
+Conobbi il Maestro quattro anni dopo.  
+</code></pre>
+
+<hr id="formattazione-output" />
+
+<p>In alcuni esempii precedenti abbiamo visto che è possibile modificare il formato di output di default di uno stream tramite dei <em>maipolatori</em>:</p>
+
+<pre><code>cout &lt;&lt; setfill('0') &lt;&lt; setw(2) &lt;&lt; ora._h &lt;&lt; ":" 
+     &lt;&lt; setfill('0') &lt;&lt; setw(2) &lt;&lt; ora._m &lt;&lt; ":" 
+     &lt;&lt; setfill('0') &lt;&lt; setw(2) &lt;&lt; ora._s &lt;&lt; endl;
+</code></pre>
+
+<p>Lo stesso risultato si può ottenere per mezzo di apposite funzioni delle classi <code>ios_base</code> e <code>basic_ios</code>, che permettono di alterare il carattere di riempimento, la precisione delle cifre decimali e la larghezza del campo.
+Le prime due modifiche sono permanenti la quarta no.
+Se si modifica il formato di output di uno stream, questo resterà nel nuovo stato fino alla prossima istruzione di modifica, mentre il valore della lunghezza del campo viene re-impostato a zero dopo ogni operazione di output:</p>
+
+<pre><code>/** 
+ * @file src/stream-format.cpp
+ * Formattazione dell'I/O con gli stream.
+ */
+ 
+#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+
+using namespace std;
+
+
+int main(int argc, char** argv)
+{    
+    double d = 123.456789 ;
+
+    /** Mostra i valori di default */
+    cout &lt;&lt; endl;
+    cout &lt;&lt; "Valori di default" &lt;&lt; endl;
+    cout &lt;&lt; "  width:     "  &lt;&lt; cout.width()        &lt;&lt; endl;
+    cout &lt;&lt; "  precision: "  &lt;&lt; cout.precision()    &lt;&lt; endl; 	
+    cout &lt;&lt; "  fill:      '" &lt;&lt; cout.fill()  &lt;&lt; "'" &lt;&lt; endl;	
+    cout &lt;&lt; "  output:    "  &lt;&lt; d                   &lt;&lt; endl;
+
+    /** Modifica il formato e mostra il nuovo output */
+    cout &lt;&lt; endl;
+    cout &lt;&lt; "Modifica formato" &lt;&lt; endl;
+    cout &lt;&lt; "  output:    "  ;
+    cout.precision(4) ;
+    cout.fill('#') ;
+    cout.width(10) ;
+    cout &lt;&lt; d &lt;&lt; endl;
+    
+    /** Mostra la persistenza dei valori */
+    cout &lt;&lt; endl;
+    cout &lt;&lt; "Valori correnti" &lt;&lt; endl;
+    cout &lt;&lt; "  width:     "  &lt;&lt; cout.width()        &lt;&lt; endl;
+    cout &lt;&lt; "  precision: "  &lt;&lt; cout.precision()    &lt;&lt; endl; 	
+    cout &lt;&lt; "  fill:      '" &lt;&lt; cout.fill()  &lt;&lt; "'" &lt;&lt; endl;	
+    cout &lt;&lt; "  output:    "  &lt;&lt; d                   &lt;&lt; endl;
+
+    return 0;
+}
+
+</code></pre>
+
+<p>Se compili ed esegui questo codice, ottieni:</p>
+
+<pre><code>&gt; src/out/esempio                                 
+
+Valori di default
+  precision: 6
+  fill:      ' '
+  width:     0
+  output:    123.457
+
+Valori modificati
+  output:    #####123.5
+
+Valori correnti
+  precision: 4
+  fill:      '#'
+  width:     0
+  output:    123.5
+</code></pre>
+
 <!--
 
-5.7	formattazione dei dati con le classi stream
-Abbiamo visto precedentemente che le classi stream operano una formattazione di de­fault sui diversi tipi di dato. Possono esserci dei casi, però, in cui questo comportamento predefinito risulta insufficiente o inadeguato alle nostre necessità. Potremmo voler visu­alizzare un intero in formato esadecimale o un carattere come intero decimale, non ci sarebbe nulla di strano, ma la formattazione standard delle classi stream non ce lo per­metterebbe.
-In compenso, però, la classe ios possiede dei membri dati di tipo protected il cui valore definisce la formattazione delle funzioni di I/O. Modificando il valore di questi dati mem­bro si modifica di conseguenza il comportamento dello stream, adattandolo alle necessità del caso. I dati membro di ios che determinano con il loro valore le caratteristiche dell’ I/O sono:
-	x_fill : intero, definisce il carattere di riempimento per l’output;
-	x_precision: intero, definisce la precisione in virgola mobile per l’output;
-	x_width: intero, definisce la dimensione del campo in input;
-In quanto membri protetti, questi valori non sono modificabili direttamente da un oggetto di classe derivata (ostream, istream ecc.). Qualunque modifica o verifica di stato va fatta per mezzo di una delle apposite funzioni di interfaccia elencate di seguito: 
-Funzioni di interfaccia per la modifica della formattazione
 
-Per mezzo di queste funzioni è possibile modificare il formato di conversione della base, il carattere di riempimento, la precisione delle cifre decimali e la larghezza del campo. Come abbiamo visto, le prime tre modifiche sono permanenti (ovvero, se si modifica il formato di output di uno stream, questo resterà nel nuovo stato fino alla prossima istruzione di modifica), mentre la quarta no: ad ogni operazione di output il valore della lunghezza del campo viene resettato a zero.
-Vediamole all’opera tutte insieme queste funzioni nel prossimo esempio che mostra anche come il settaggio dell’ampiezza del campo non sia permanente:
-FORMOUT.CPP - Modifica della formattazione dell’ouput
-/////////////////////////////////////////////////////////////
-//
-//	Dal C a Windows - Carlo Simonelli & Claudio Munisso
-//
-//	FORMOUT.CPP - Modifica dellla formattazione dell'output
-//
-/////////////////////////////////////////////////////////////
-#include <iostream.h>
-/////////////////////////////////////////////////////////////
-void main()
-{
- double d = 123.456789 ;
-
-  cout << "\nPrecisione = "<< cout.precision() ; 	// 001
-  cout << "\nRiempimento = '"<< cout.fill() << "'";	// 001
-  cout << "\nLarghezza = " << cout.width() ;		// 001
-
-  cout << "\nVisualizzazione = "<< d ;			// 002
-  cout << "\nCon i nuovi settaggi = " ;			// 003
-  cout.precision(3) ;						// 004
-  cout.fill('#') ;						// 004
-  cout.width(10) ;						// 004
-  cout << d ;							// 005
-
- cout << "\nVia precision() e fill() = " ;
- cout.width(10) ;							// 006
- cout << d ;							// 007
-
- cout << "\nVia anche width() = " << d ;			// 008
-
- cout << "\nPrecisione = " << cout.precision() ;	// 009
- cout << "\nRiempimento = '"<< cout.fill() << "'" ;	// 009
- cout << "\nLarghezza = " << cout.width() ;		// 009
-};
-/////////////////////////////////////////////////////////////
-001  Visualizza i settaggi di default.
-002  Visualizza la variabile con i settaggi di default.
-003  Vediamo se indovinate perché questa stringa va visualizzata separatamente...
-004  Modifica i settaggi di default.
-005  Visualizza la variabile con i nuovi settaggi.
-006  Ripete solo la modifica della dimensione del campo.
-007  Visualizza la variabile con i nuovi settaggi.
-008  Visualizza la variabile senza effettuare settaggi.
-009  Visualizza il valore delle variabili dopo i settaggi.
-L’ouput di questo esempio è:
-
-Precisione = 6
-Riempimento = ' '
-Larghezza = 0
-Visualizzazione = 123.456789
-Con i nuovi settaggi = ###123.457
-Via precision() e fill() = ###123.457
-Via anche width() = 123.457
-Precisione = 3
-Riempimento = '#'
-Larghezza = 0
-Come potrete vedere, le modifiche apportate con precision() e fill() rimangono at­tive anche dopo una prima operazione di output, mentre quelle conseguenti a width() no. Per questa ragione, le intestazioni delle righe 005 e 007 sono visualizzate prima delle modifiche. Se così non fosse stato, e cioè se la riga 005 fosse stata:
-cout << "\nCon i nuovi settaggi = " << d ;		// 005
-l’operazione di output della stringa avrebbe resettato il valore di x_width e l’output sarebbe quindi stato:
-
-Con i nuovi settaggi = 123.457
 5.8	modifica dei flags di formattazione
 Ma la larghezza del campo, la precisione ed il carattere di riempimento non sono le uniche formattazioni modificabili. Un altro modo di modificare le convenzioni di format­tazione standard è quello di alterare la variabile membro x_flags che contiene i flags per la formattazione. 
 La dichiarazione della variabile è:
@@ -1001,6 +1090,7 @@ ostream & beep (ostream & os)
 	return os << '\a' ; 	//codice di escape per BELL
 }
 per scoprire a cosa serve, compilate ed eseguite il seguente esempio:
+
 MANIPDU.CPP - Manipolatori definiti dall’utente
 /////////////////////////////////////////////////////////////
 //
@@ -1066,6 +1156,7 @@ fstream fs( "pippo.dat", ios::in | ios::out | ios::nocreate);
 L’ultimo costruttore delle classi fstream ha anche un terzo parametro che defiisce la modalità di protezione per il file. La sua dichiarazione è infatti():
 ifstream(const char* nome, int mode, int prot=ios::openprot);
 Come noterete, però, il parametro prot ha un suo valore di default, ios::openprot, che, almeno per ora, è anche l’unico possibile, quindi potete tranquillamente ignorarlo. 
+
 Orbene, dopo aver tanto parlato, eccovi un esempio che mostra tutti questi nostri nuovi amici all’opera:
 FSTRTEST.CPP - Utilizzo delle classi fstream
 /////////////////////////////////////////////////////////////
@@ -1127,11 +1218,15 @@ void main()
 007  Se si è verificato un errore lieve...
 008  ...resetta la variabile di stato.
 009  Copia il carattere nel file di output.
+
 Come spero l’esempio abbia chiarito, le funzioni di controllo, i manipolatori e gli opera­tori di inserimento ed estrazione, si possono applicare agli stream di I/O su file esatta­mente come avveniva per gli oggetti di classe iostream o ostream. 
+
 La funzione open(), utilizzata alla riga 007, è una funzione membro che serve ad aprire un file colle­gandolo con uno stream precedentemente aperto. La sua dichiarazione, che ricorda molto quella del costruttore della classe fstream, è la seguente:
 void open(char const*, int, int = filebuf::openprot) ;
+
 L’altra funzione membro utilizzata nell’esempio è tellg(), che fstream eredita in secondo grado della classe istream. Ritorna la posizione della prossima operazione di estrazione () e la sua dichiarazione è:
 long tellg() ;
+
 5.11 POsizionamento negli stream di i/o su file
 Simile alla funzione membro tellg(), è la funzione tellp(), che  fstream eredita da sua "nonna" ostream e che ritorna la posizione della prossima operazione di inseri­mento. Complementari a tellg() e tellp() sono, rispettivamente, seekg() e seekp(), che posizionano nel file ad una posizione relativa o assoluta. La tabella seguente riporta le dichiarazioni delle diverse funzioni:
 Funzioni di posizionamento su stream
@@ -1149,38 +1244,6 @@ L’effetto dei diversi parametri è il seguente:
 	ios::beg: sposta la prossima operazione a pos bytes dall’inizio del file associato;
 	ios::cur: si sposta a pos bytes dalla posizione corrente;
 	ios::end: si sposta a pos bytes prima della fine del file.
-5.12 SISTEMI DI FUNZIONI ITERATE
-Il prossimo esempio riunisce un po’ tutti gli elementi esaminati in questa parte del manuale. Si tratta di un visualizzatore di sistemi di funzioni iterate (da adesso in poi abbreviato in IFS) che visualizza delle immagini applicando delle trasformazioni casuali alle coordinate di un un punto. Se il valore delle coordinate iniziali è (X, Y) le coordinate Xnew, Ynew del nuovo punto saranno:
-
-Xnew = a*X + b*Y + c 
-Ynew = d*X + e*Y + f
-laddove a, b, c, d, ed f sono i valori che definiscono la trasformazione e variano a seconda del tipo di immagine che si desidera ottenere.
-
-void CreaMatrice(char * filename)
-{
- ifstream is ;
- double somma = 0 ;
-
-	is.open(filename) ;
-
-	if( ! is ) Erore("\nErrore in apertura file di input") ;
-	is >> Set ;
-
-	for(int r = 0 ; r < Set.Righe ; r++ )
-	{
-		for(int c = 0 ; c < 7 ; c++)
- 			  is >> Matrice[r][c]  ;
-
-		Matrice[r][0] += somma ;
-		somma = Matrice[r][0] ;
-	}
-}
-Questa funzione legge da uno stream di input un set di parametri fissi per ogni IFS (numero delle trasformazioni, posizionamento sullo schermo, titolo ecc.), quindi riempie una matrice con i valori delle trasformazioni, che hanno questo formato:
-Set di trasformazioni
-
-I valori contenuti nella prima colonna determinano le probabilità che la trasformazione ha di essere selezionata: in questo caso 1/3 ciascuna, ma i valori possono essere differenti per far sì che una trasformazione venga applicata più frequentemente delle altre. 
-Una volta determinati i valori per le trasformazioni, non resta che applicarle casualmente alle coordinate del punto, visualizzando di volta in volta il pixel corrispondente. Ed è qui che la cosa si fa interessante: per quanto le trasformazioni vengano applicate casualmente ed indipendentemente dalle coordinate iniziali del punto, la figura generata sarà sempre la stessa. Provare per credere:
-IFS.CPP - Programma di visualizzazione per sistemi di funzioni iterate
 
 -->
 

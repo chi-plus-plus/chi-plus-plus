@@ -1,3 +1,10 @@
+## 0.28.4 (August 25, 2021)
+  - Redazione capitolo stream - precision, fill, width
+  - Redazione capitolo stream - Output esempio eccezioni
+
+## 0.28.3 (August 25, 2021)
+  - Redazione del capitolo sugli stream - gestione iostate
+
 ## 0.28.2 (August 19, 2021)
   - Redazione del capitolo sugli stream - iostate e eof
 
