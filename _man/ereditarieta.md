@@ -428,7 +428,7 @@ cane.Mammifero::getSpecie();
 <hr id="dottrina">
 
 Buona parte degli esempii e delle cose che ti ho detto in questa lezione le ho prese dal manuale di programmazione in C++ che il Maestro Canaro scrisse nel Secolo scorso, modificandoli per adattarli a questo contesto.   
-L'esempio originale delle funzioni virtuali, per dire, era così:
+L'esempio originale delle funzioni virtuali, per esempio, era così:
 
 ```
 {% include_relative src/ereditarieta-codice-canaro.cpp %}
@@ -496,12 +496,12 @@ L'arte è il motore del mito.
 Un motore che si auto-alimenta, come il Sole, perché si nutre di eventi epici e li genera a sua volta ispirando gli eroi a imprese degne di memoria.  
 La parola *arte*, così come: *amore*, del resto, è una di quelle parole che le gente utilizza spesso ma di cui non viene mai data una definizione precisa, perché le si ritiene dei concetti auto-esplicativi che non occorre definire. 
 È sbagliato: come abbiamo visto, tutte le parole, anche quelle più comuni, possono essere interpretate in maniera differente.
-In un suo saggio giovanile su Amore e Arte, il Maestro Canaro scrisse che:
+In <a href="https://canaro.net/amore-e-arte" target="canaro">un suo saggio giovanile su Amore e Arte</a>, il Maestro Canaro scrisse che:
  
  > L'Arte è la traccia del cammino dell'Uomo verso Dio 
  
- specificando poi che, con il termine: "Dio" (altra parola interpretata in maniera differente da ciascuno di noi), intendeva il senso dell'Esistenza.
-Alcuni anni dopo, però, guardando delle foto di crostate realizzate dallo chef Gianluca Fusto<a href="/note/#fusto" class="nota"></a>, capì che la sua definizione era imperfetta, perché non includeva, o quanto meno lasciava a margine, gli arte-fatti che non ricadevano nelle categorie artistiche canoniche. 
+ specificando poi che, con il termine: “Dio” (altra parola interpretata in maniera differente da ciascuno di noi), intendeva il senso dell'Esistenza.
+Alcuni anni dopo, però, guardando delle foto di crostate realizzate dallo chef Gianluca Fusto<a href="/man/note/#fusto" class="nota"></a>, capì che la sua definizione era imperfetta, perché non includeva, o quanto meno lasciava a margine, gli arte-fatti che non ricadevano nelle categorie artistiche canoniche. 
 Modificò per ciò la sua definizione di Arte in:
 
 > L'Arte è la traccia del cammino dell'Uomo verso la Perfezione
@@ -545,4 +545,4 @@ Indubbiamente, il fatto che la Regola del nostro Ordine ci imponga l'uso di cami
 
 > La pelliccia è fatta di peli
 
-e finché la nostra specie non imparerà a fare un uso più responsabile delle sue gonadi, non potremo far altro che compensare come possiamo i problemi legati alla sovrappolazione.
+e finché la nostra specie non imparerà a fare un uso più responsabile delle sue gonadi, non potremo far altro che compensare come possiamo i problemi legati alla sovrappopolazione.

@@ -360,7 +360,9 @@ log("ho chiuso il file");
 
 <hr id="parametri-variabili">
 
-In una delle nostre [prime chiacchierate](/man/programmatore), ti ho detto che il Buon Programmatore, mentre scrive il codice, si chiede sempre se possa esistere sistema più efficiente di fare ciò che sta facendo.
+In una delle nostre 
+<a href="/man/programmatore" class="xref">prime chiacchierate</a>, 
+ti ho detto che il Buon Programmatore, mentre scrive il codice, si chiede sempre se possa esistere sistema più efficiente di fare ciò che sta facendo.
 Oggi ne hai avuto una dimostrazione: abbiamo migliorato il primo esempio del paragrafo sulle funzioni `inline` unificando la gestione dei messaggi in un'unica funzione e poi l'abbiamo migliorato ancora rendendo quella funzione `inline`. 
 C'è un problema, però: l'output del programma:
 
@@ -531,3 +533,12 @@ Dovrai essere capace di identificare i malfunzionamenti anche se non hanno effet
 Cambiano i nomi, perché sono passati quattro secoli, ma i problemi restano gli stessi, così come le soluzioni.  
 Del resto, arte, scienza, filosofia e religione sono tutti tentativi di dare una risposta alle stesse domande sulla nostra esistenza. 
 Dato che l'oggetto di studio è lo stesso, è più che normale che, alle volte, le risposte si somiglino, allo stesso modo in cui l'algoritmo per il calcolo del fattoriale di un numero sarà più o meno lo stesso, indipendentemente dal linguaggio di programmazione.  
+
+
+<!--
+
+@todo: aggiungere i 10C rivisti dal Maestro Canaro
+specificare che quando aveva redatto la prima versione era un "angy young man", come direbbe Santillana, ma che poi aveva capito che le religioni sono come le opere teatrali e non le si può giudicare in base alle capacità degli attori.
+
+
+-->

@@ -28,7 +28,7 @@ Tutti i testi, le immagini e i dati relativi al C'hi++ sono raccolti in un
 
 ---
 
-Tutto nasce da una domanda: *È possibile dare una spiegazione dell'esistenza sftuttando solo ciò di cui abbiamo esperienza diretta?*
+Tutto nasce da una domanda: *È possibile dare una spiegazione dell'esistenza sfruttando solo ciò di cui abbiamo esperienza diretta?*
 Le religioni, per “funzionare”, richiedono da una a tre dimensioni aggiuntive, oltre quelle note; la Scienza, per le sue *superstringhe* ha bisogno almeno di sette dimensioni aggiuntive, ovvero il doppio di quelle che servono per un Aldilà non spirituale. Esiste una spiegazione più semplice?
 Dopo averci ragionato su per una quarantina di anni, posso dire che sì: una spiegazione più semplice esiste ed è anche compatibile con molti dei principii delle religioni canoniche, alle quali C'hi++ non vuole sostituirsi, ma affiancarsi. 
 
@@ -85,14 +85,15 @@ Ma chi siamo, “noi”? Se la materia altro non è che la manifestazione di una
 
 > {{ site.data.citazioni.saadi }}
 
-Però, se davvero siamo tutti degli epifenomeni, il nostro io cosciente può manifestarsi ora qui ora lì, a seconda dei casi. E se io, in questo ciclo dell’Universo, mi metto a spacciare droga fregandomene delle persone che ammazzo, in un altro ciclo di questa particolare specie di Universo potrei ritrovarmi in uno di quei drogati subendo le conseguenze delle mie stesse azioni. È quindi preferibile che io mi comporti bene e che cerchi di convincere anche gli altri a comportarsi bene, perché, come recita il *Mantiq al-Tayr*:
+Però, se davvero siamo tutti degli epifenomeni, il nostro io cosciente può manifestarsi ora qui ora lì, a seconda dei casi. 
+E se io, in questo ciclo dell’Universo, mi metto a spacciare droga fregandomene delle persone che ammazzo, in un altro ciclo di questa particolare specie di Universo potrei ritrovarmi in uno di quei drogati subendo le conseguenze delle mie stesse azioni. È quindi preferibile che io mi comporti bene e che cerchi di convincere anche gli altri a comportarsi bene, perché, come recita il *Mantiq al-Tayr*:
 
-> {{ site.data.citazioni.mantiq }}
+> {{ site.data.citazioni.mantiq.male }}
 
 Il problema, come sempre, è capire *cosa* sia davvero “bene”.
-Per farlo, abbiamo bisogno di introdurre l'unico elemento realmente metafisico del C'hi++: una sorta di memoria persistente dell'Universo, simile all'*hard-disk* dei computer o al *Vāsanā* di Yoga e Buddimo, nella quale rimane traccia delle scelte che abbiamo fatto durante le nostre esistenze e delle conseguenze che hanno generato.
-Se capiamo che una nostra azione ha avuto delle conseguenze negtive, quell'azione verrà “memorizzata” fra gli errori, nella speranza che non venga ripetuta in altre occasioni.
-Al contrario, le azioni che hanno degli esiti positivi venrranno “ricordate” come buone, affinché le si ripeta in altri cicli di vita dell'Universo.
+Per farlo, abbiamo bisogno di introdurre l'unico elemento realmente metafisico del C'hi++: una sorta di memoria persistente dell'Universo, simile all'*hard-disk* dei computer o al *Vāsanā* di Yoga e Buddhismo, nella quale rimane traccia delle scelte che abbiamo fatto durante le nostre esistenze e delle conseguenze che hanno generato.
+Se capiamo che una nostra azione ha avuto delle conseguenze negative, quell'azione verrà “memorizzata” fra gli errori, nella speranza che non venga ripetuta in altre occasioni.
+Al contrario, le azioni che hanno degli esiti positivi verranno “ricordate” come buone, affinché le si ripeta in altri cicli di vita dell'Universo.
 
 Per il C'hi++, ciascun essere senziente è uno dei neuroni di un cervello (l'Universo) a cui contribuisce a dare forma grazie a ciò che impara nel corso delle sue esistenze.
 Se riconosciamo i nostri errori come tali, è possibile che non li ripeteremo in futuro; altrimenti continueremo a commetterli, generando delle forme “dolorose” dell'Universo.

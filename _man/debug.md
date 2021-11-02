@@ -1,5 +1,5 @@
 ---
-status:     bozza
+status:     pubblicato
 layout:     manuale
 class:      capitolo
 no-index:   true
@@ -9,10 +9,12 @@ quote:      "Cento Mondi di peccato sono dissipati dalla luce di un solo ticket"
 ---
 
 Il debug potrà non essere il senso della vita, come recita il titolo del tuo libro, ma è indubbiamente l'aspetto più importante della programmazione.  
-
 Nella tua carriera di programmatore potrai non utilizzare mai una classe *functor* o ridefinire l'operatore `->`, ma sicuramente farai degli errori e li dovrai correggere.
-Malgrado ciò, i manuali di programmazione non parlano mai del *debug*.  
+Malgrado ciò, i manuali di programmazione non parlano mai del *debug*.
 Si sono scritte migliaia di pagine sui diversi linguaggi di programmazione; non c'è primavera che non veda fiorire un nuovo paradigma di programmazione &mdash; strutturata, *object-oriented*, *agile*, *fuzzy* &mdash; eppure, nessuno si è mai preoccupato di formalizzare il processo di correzione del codice.  
+
+> {{ site.data.canaro.decadenza-software }}
+
 Trascurare il debug è come affermare che non si faranno mai errori.
 Non importa quanto sia efficiente il linguaggio di programmazione; non importa quanto sia astuto e vigile il compilatore; non importa nemmeno quanto sia bravo il programmatore: o prima o poi, la distrazione, la stanchezza o un evento esterno permetteranno a un errore di intrufolarsi nel codice.
 Un puntatore utilizzato impropriamente, un ciclo in più o in meno in un'istruzione `for` o una virgola dimenticata fra i parametri di una `printf`: qualunque cosa sia, se il compilatore non sarà in grado di riconoscerla, finirà nel programma è resterà lì in attesa di produrre i suoi effetti dannosi.
@@ -373,10 +375,10 @@ Così come influenza le opinioni del tuo cliente, il Marketing può influire su 
 Fà attenzione che ciò non accada.
 Sorveglia costantemente le tue scelte; così come il Buon Programmatore, pensa sempre su più livelli e confrontati con altri colleghi o con il tuo superiore per essere certo di aver fatto le scelte giuste.
 Non vergognarti dei tuoi errori: sono i mattoni su cui edificherai la tua esperienza.  
-Sii anche preparato a essere costretto a commettere degli errori.
+Sii anche preparato a dover fare degli errori.
 O prima o poi, capiterà che un cliente ti chieda di fare una scelta che tu ritieni sbagliata.
 Quando ciò accadrà, dovrai per prima cosa cercare di convincerlo dell'errore, spiegandogli perché la sua richiesta non sia corretta.
-Se non ci riesci, ripeti la tua opposizione, perché sia chiaro che la tua non è un'ipotesi, ma una certezza, però non insistere oltre: sia perché questo potrebbe creare degli attriti con il tuo interlocutore, sia perché alla lunga potresti scoprire che è *lui* ad avere ragione.    
+Se non ci riesci, ripeti la tua opposizione, perché sia chiaro che la tua non è un'ipotesi, ma una certezza, però non insistere oltre: sia perché questo potrebbe creare degli attriti con il tuo interlocutore, sia perché alla lunga potresti scoprire che è lui ad avere ragione.    
 Se non riuscirai a convincere il cliente di un suo errore, dovrai portare a termine ciò che ti chiede, ma al contempo dovrai fare in modo che le conseguenze di quella scelta non possano essere attribuite a te in futuro.
 Dato che le conseguenze nefaste di un errore architetturale potrebbero manifestarsi dopo mesi o anche anni dalla fase di analisi, non limitarti a *dire* al cliente che si sbaglia, ma scrivilo, in modo che resti traccia della tua opposizione.  
 Il tuo peggior nemico, in questi casi, sarà il tuo orgoglio. 
@@ -445,7 +447,7 @@ La maschera di inserimento nuovo utente non gli diede problemi, ma la maschera d
 Ciò vuol dire che il sistema utilizzava due funzioni distinte per il controllo della data di nascita, una nella funzione di inserimento e un'altra nella funzione di modifica, e che almeno la funzione utilizzata in modifica non era una funzione standard, ma codice scritto *ad-hoc*.  
 Entrambe queste scelte sono errori: a una determinata azione sui dati deve corrispondere una singola funzione.
 Fare la stessa operazione con parti di codice distinte è sbagliato; sia perché aumenta la probabilità di commettere degli errori, sia perché rallenta i tempi di identificazione dell'errore in fase di debug.
-È sbagliato anche riscrivere delle funzioni che già esistono: D. J. Bernstein lo fece, con le funzioni di I/O di <a href="http://cr.yp.to/djb.html" target="qmail">qmail</a>, ma la sua fu una precisa scelta architetturale perché voleve delle funzioni che fossero migliori e più sicure delle funzioni della libreria standard.  
+È sbagliato anche riscrivere delle funzioni che già esistono: D. J. Bernstein lo fece, con le funzioni di I/O di <a href="http://cr.yp.to/djb.html" target="qmail">qmail</a>, ma la sua fu una precisa scelta architetturale perché voleva delle funzioni che fossero migliori e più sicure delle funzioni della libreria standard.  
 <!--- e comunque, fare l'analisi del codice di qmail è un delirio.. -->
 A questi due errori di programmazione &mdash; inammissibili, in un sito che gestisca transazioni economiche &mdash; si aggiunge una profonda sciatteria della fase di debug del codice, perché la corretta gestione dei casi particolari, come gli anni bisestili, va sempre verificata.
 Quando verifichi il funzionamento di un programma, non puoi limitarti a controllare che faccia ciò che deve fare, ma devi anche assicurarti che non faccia ciò che non deve fare. 
@@ -611,19 +613,84 @@ In un programma più complesso del nostro esempio, le modifiche sarebbero state 
 Le costanti *hard-coded* possono essere utilizzate solo nella prima fase dello sviluppo del programma, quando non sei ancora sicuro che la strada che hai scelto sia quella giusta. 
 In questa fase è ammissibile che tu faccia delle prove inserendo dei valori direttamente nel codice, ma quando l'algoritmo sarà ragionevolmente stabile, dovrai convertire tutti i valori in costanti.
 
+<hr id="dottrina">
+
+> {{ site.data.citazioni.croce.testo }}<a href="/man/note#croce" class="nota"></a>
+
+O prima o poi, la tua vita andrà in errore, come il software.  
+Non importa quanto tu sia stato prudente o quale sia il tuo *Karma*: a un certo punto la terra sotto i tuoi piedi comincerà a franare e tu cadrai giù, lungo la montagna che stavi scalando, ritrovandoti al punto di partenza. 
+Quello che farai in quel momento deciderà del resto della tua vita e ti farà capire che tipo di uomo sei &mdash; o che donna, visto che queste cose non succedono solo ai maschietti.  
+Comincia a prepararti da adesso a quel momento, perché, quando avverrà (*quando*, non: *se*), probabilmente sarai solo e prendere delle decisioni sarà molto difficile perché avrai perso ogni fiducia in te stesso.
+Se ti rompi una gamba, o un braccio, il tuo cervello ti può dire se stanno guarendo o peggiorando, ma se batti la testa non è facile capire come stai, perché l'organo in esame e l'organo esaminatore coincidono.
+<!-- @todo - decidere se aggiungere aneddoto su Maestro Canaro e solitario -->
+Allo stesso modo, se non ti fidi di te stesso, è difficile capire se le scelte che fai sono corrette. 
+La paura o la prudenza potrebbero spingerti a non fare la scelta giusta, quindi, per prima cosa, dovrai fare il *debug* della tua vita per capire se e in quale misura devi biasimarti per ciò che è avvenuto; fatto ciò, dovrai identificare i tuoi errori e trovare un modo per non ripeterli.  
+L'approccio più comune è di guardarsi indietro e cercare di capire quali siano state le proprie colpe, considerando queste degli eventi isolati in un'esistenza fatta prevalentemente di scelte corrette. 
+Dato però che ciascuno di noi tende &mdash; più o meno inconsciamente &mdash;, a cercare cause esogene alle sue sventure inventandosi complotti o trasferendo le proprie responsabilità a terzi, la cosa migliore, in questi casi, è di adottare l'atteggiamento opposto e partire dal presupposto che *tutto* ciò che è successo di male nella tua vita sia una tua colpa, per poi individuare i casi in cui ciò che è successo, in effetti, non è dipeso da te.
+Questo approccio *bottom-down*<a href="/man/note#bottom-down" class="nota"></a> ha due pregi: il primo  è che, analizzando gli eventi passati potresti scoprire che alcune colpe che ti attribuivi non erano reali; il secondo è che sarà più difficile mentire a te stesso.
+Ciascuno di noi ha una parte di responsabilità in ciò che gli succede, anche negli eventi che non genera direttamente.
+Assumersi a priori la colpa di tutto il male che ci è successo rende più difficile mentirci e ci permette di identificare tutte le nostre colpe, per piccole che siano.  
+Attenzione, però: non devi pensare alle tue colpe come se fossi un inquisitore del tredicesimo Secolo, ma come se fossero dei *bug* nel programma della tua vita. 
+Qualcuna genererà degli errori, altre solo dei *warning* e il tuo dovere è quello di identificarne il più possibile, per poi cercare di correggerle per migliorare il funzionamento del sistema.
+
+> {{ site.data.citazioni.deen.testo }}<a href="/man/note#deen" class="nota"></a>
+
+Contrariamente a quello che avviene con il software, non sempre è possibile correggere i *bug* della nostra esistenza.
+Si può modificare un aspetto deteriore del nostro carattere, ma non è detto che sia possibile rimediare ai danni che questo ha causato a noi o a terzi.
+Per fare un paragone con il debug del software, i difetti caratteriali sono errori di compilazione, mentre gli effetti dei nostri sbagli sono errori di esecuzione; i primi li possiamo correggere, gli errori di esecuzione, no: ormai è andata. 
+Quello che possiamo e che dobbiamo fare, però, è di <a id="pentimento" href="/man/istruzioni-condizionali#pentimento" class="xref">pentircene sinceramente</a>, ovvero riconoscerli come errori, in modo da evitare di ripeterli nei prossimi cicli di esistenza.  
+Anche se non possiamo cancellare gli effetti di un nostro errore, possiamo comunque chiedere perdòno a coloro i quali abbiamo arrecato danno.
+Non basterà chiedere scusa: si chiede scusa quando ciò che hai fatto non dipende da te, come quando qualcuno di urta e tu versi il tuo vino sul vestito del vicino; se invece il vino glielo hai tirato addosso intenzionalmente, dovrai chiedere *perdòno*, cercare per quanto possibile di riparare all'errore fatto e non commetterlo mai più, né con lui (o lei) né con altri.  
+Non sottovalutare il potere terapeutico del perdono, anche se ci saranno dei casi in cui non lo otterrai.
+Se è vero che non si può cambiare il passato per qualcuno che abbiamo ferito, è altrettanto vero che si può provare a compensare il danno fatto rendendogli migliore il presente o il futuro. 
+Le persone a cui facciamo del male sono spesso quelle a cui siamo più legati; far sapere loro che che non li abbiamo dimenticati e che ciò che è successo ci addolora, può servire a ricucire delle ferite; dall'una e dall'altra parte. 
+
+<hr id="come-capire">
+
+Quando ripenserai a ciò che ti è avvenuto in passato, come un buon analista, dovrai cercare di immedesimarti nelle persone con cui hai avuto a che fare, capire le loro ragioni al di là di eventuali rancori o recriminazioni.
+Per fare ciò, dovrai tenere a mente alcuni fattori che influenzano il comportamento di tutti noi. 
+Il primo, ovviamente, è l'influenza dell'Annosa Dicotomia, che, per mano del suo lacché il Marketing, spinge le persone a soddisfare i proprii desiderii invece che i proprii bisogni, creando degli schemi di valori fallaci e spingendoli a dimenticare che esistono per tutti la vecchiaia e la morte.   
+Il secondo fattore da considerare è la natura umana; ricorda:
+
+> {{ site.data.canaro.malizia }}
+
+O, per dirla con De Santillana:
+
+> {{ site.data.citazioni.santillana.stoltezza }}<a href="/man/note#stoltezza" class="nota"></a>
+
+Per derimere le questioni relative ai rapporti di coppia, invece, l'approccio più sicuro è quello antropologico.
+Come diceva il Maestro Canaro:
+
+> {{ site.data.canaro.femminismo }}
+
+Secondo lui, qualsiasi comportamento anomalo nell'ambito di una coppia può essere spiegato tenendo a mente tre principii:
+
+1. le donne sono incubatrici parlanti;<br />
+2. gli uomini sono dispenser di sperma;<br />
+3. ogni eccesso nasconde un eccesso di natura opposta e pari entità.
+
+Parafrasando quel senza Dio di Dawkins, noi siamo l'*hard-disk* dei nostri geni, la memoria di massa che garantisce loro una persistenza.
+Il nostro software può variare, ma il <a href="/man/note#firmware" class="xref">firmware</a> che definisce il nostro comportamento a basso livello è immutato da migliaia di anni e ci spinge a fare ciò per cui siamo stati creati, ovvero riprodurci.  
+Né le sovrastrutture culturali che abbiamo inventato, né gli idoli ai cui piedi ci prostriamo e nemmeno l'Annosa Dicotomia possono modificare la nostra ROM.
+Ignorare o, peggio, ribellarsi a questo stato di fatto è il primo passo verso la rovina o l'infelicità o entrambe le cose.  
+
+<hr id="fine">
+
+Ecco: questo è tutto. 
+Ricorda però: ciò che ti ho insegnato non è un punto di arrivo, ma un punto di partenza.
+La fine del cammino che abbiamo percorso insieme coincide con l'inizio del cammino che percorrerai da solo. 
+Da questo momento in poi tu hai il dovere di diffondere le idee che ti ho trasmesso e, allo stesso tempo, di metterle costantemente alla prova per emendarle dai molti errori che certamente avrò commesso, così come il Maestro Canaro prima di me.
+Così come agli antichi Cristiani era vietato adorare gli idoli, io ti vieto di adorare le parole.
+Scrivi il tuo libro, se lo desideri, ma che non sia un libro stupido; fa' in modo che lo si possa correggere facilmente, se necessario, in modo che ciò che afferma sia sempre il punto più vicino alla verità che tu possa raggiungere, perché l'oggetto dei tuoi sforzi dev'essere sempre la verità, non la tradizione.  
+Noi viviamo prevalentemente sulla terraferma e riteniamo perciò che la normalità sia questa. Se però si trascorre un lungo periodo di tempo su una nave o in un'isola, si ha modo di capire come la normalità sia l'acqua e la terra sia solo un'eccezione.
+Similmente, noi diamo grande importanza al ciclo di nascita, riproduzione e morte che chiamiamo “vita” e in essa vediamo il fine ultimo dell'Universo, dimenticandoci che la vita è solo un caso particolare di esistenza e che un universo di sassi sarebbe comunque prodigioso.  
+Ciascuna forma di vita consociata, per poter sopravvivere, richiede la legittimazione di alcune follie biologiche.
+Il rispetto di queste follie, essendo in-naturale, richiede l'istituzione di un livello superiore di costrizione, ovvero un corpo di regole formali ancora più distante del precedente dal comportamento biologico degli esseri viventi.
+Con il passare del tempo, molte di queste convenzioni nate in seguito a esigenze contingenti, finiscono inevitabilmente per contrastare con il senso comune di giustizia e devono essere o abolite o modificate, solo che ciascuna modifica o adattamento invece di renderle più “giuste”, le allontana ulteriormente dal loro scòpo iniziale e le rende soggette a interpretazioni errate o addirittura opposte a quelle che era il loro fine primario.  
+Sant'Agostino ha detto la stessa cosa, ma molto meglio di quanto stia facendo io adesso.  
+Si vede che era sobrio.
+
 
 <!--
-
 importanza dell'impaginazione dei nomi: OPEN, CLOSE, READ / INPUT, DELETE, UPDATE
-v. Orologiaio, pos. 3836 
-
-Il cambiamento inizia quando si intraprende un nuovo sentiero , anche se questo sentiero non è che una traccia lasciata da una capra assetata che ha trovato una sorgente .
-M. Deen - Per antiche strade
-
-Se non lo si è fatto finora, spiegare che gli esempii del testo sono studiati per essere progressivamente migliorati, per dimostrare come la scrittura di codice sia un'attività in continua evoluzione.
-
-La decadenza del software è iniziata quando le stampanti laser hanno soppiantato le vecchie stampanti ad aghi.
-Il codice non si può leggere su un foglio A4: a meno che non sia un programma banale, non c'entrerà né in altezza né in larghezza.
-Il modulo in continuo di una stampante ad aghi a 136 colonne, al contrario, ti permette di stampare tutto il tuo codice e di rileggerlo con calma; correggerlo, se necessario e migliorarlo se possibile.
-È così che si facevano le revisioni di codice, quando c'erano il tempo e i soldi per fare le revisioni di codice.
 -->

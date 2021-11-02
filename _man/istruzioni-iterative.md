@@ -32,7 +32,7 @@ for(<stato iniziale> ; <stato finale> ; <variazione>)
 
 Le tre condizioni all'interno delle parentesi sono utilizzate dall'istruzione `for` per controllare l'esecuzione delle istruzioni all'interno del corpo del ciclo.  
 La prima espressione è valutata solo una volta all'inizio del ciclo e, solitamente, serve a inizializzare le variabili utilizzate.  
-La seconda espressione è una condizione logica o relazionale che viene valutata all’inizio di ogni iterazione: se torna `0` o `false` l’esecuzione del ciclo termina, altrimenti posegue.  
+La seconda espressione è una condizione logica o relazionale che viene valutata all’inizio di ogni iterazione: se torna `0` o `false` l’esecuzione del ciclo termina, altrimenti prosegue.  
 La terza espressione viene valutata al termine di ogni iterazione e, di solito, è costituita da un’espressione di incremento o decremento delle variabili utilizzate per il controllo del ciclo.
 Per fare ciò, si utilizzano degli operatori unarii (ovvero che operano su una singola variabile) detti: *operatori di incremento* e *operatori di decremento*, che possono svolgere la loro funzione o prima o dopo l’utilizzo della variabile, a seconda che vengano posti prima o dopo l’identificatore della variabile: 
 
@@ -86,7 +86,7 @@ for( ; ; )
 ```
 
 Un ciclo di questo tipo continuerà a ripetersi indefinitamente e, se non viene fermato in qualche maniera, causerà inevitabilmente dei problemi al computer che lo esegue.
-È necessario quindi porre un limite al numero di ripetizioni, utilizzando la stessa parola-chiave `break`che abbiamo usato con le istruzioni `switch`.
+È necessario quindi porre un limite al numero di ripetizioni, utilizzando la stessa parola-chiave `break` che abbiamo usato con le istruzioni `switch`.
 Stavolta, però, cominceremo a fare le cose come vanno fatte e separeremo le tre componenti del programma precedente in tre file distinti: `pianeti.h`, che conterrà le dichiarazioni delle costanti e della funzione `mostraPianeta`; `pianeti.cpp`, contenente la definizione della funzione `mostraPianeta` e `pianeti-main.cpp` per la funzione `main`:
 
 ```
@@ -311,7 +311,7 @@ void eternita()
 }
 ```
 
-Se non ci fosse questa ciclicità, ovvero senza un'alternanza fra Entropia e Gravità, fra *Prakṛti* e *Puruṣa*, lo Spazionismo e, di conseguenza,il C'hi++ non avrebbero più senso, così come la nostra esistenza.
+Se non ci fosse questa ciclicità, ovvero senza un'alternanza fra Entropia e Gravità, fra *Prakṛti* e *Puruṣa*, lo Spazionismo e, di conseguenza, il C'hi++ non avrebbero più senso, così come la nostra esistenza.
 La Vita si rivelerebbe un epifenomeno destinato a esaurirsi nella morte termica dell'Universo e nessun ordine sociale sarebbe più possibile, perché ciascuno cercherebbe di ottenere il massimo possibile dai pochi anni che gli sono concessi, indifferente al costo che questo avrebbe per gli altri. 
 Qualcosa di simile al *Black Friday* in un centro commerciale americano, per intendersi.. <a href="/man/note/#blackfriday" class="nota"></a>
 
@@ -409,5 +409,13 @@ Mi sembra un motivo più che sufficiente.
 @todo: 
 
 - introdurre l'idea delle "variazioni" della storia dell'Universo
+
+L'Esistenza potrebbe essere un sistema per smaltire l'energia dell'Universo (o di quello che ha intorno), così come le perturbazioni sono un sistema per smaltire l'energia dell'atmosfera?
+
+Eudosso scrive che gli Egiziani raccontano di Zeus questa storia. Il dio non poteva camminare, giacché le sue gambe erano sin dalla nascita saldate in un pezzo solo, e per la vergogna passava il suo tempo in solitudine. Fu Iside a tagliare e separare quella strana parte del suo corpo, mettendolo così in grado di camminare con le sue gambe. E il significato della storia è che la mente e la ragione del dio sono di per sé immobili nell’invisibile e nell’insensibile, e prendono la strada della creazione grazie a una spinta motrice.
+Plutarco, citato da Giorgio Santillana, Sirio, Adelphi. 
+Confrontare con le divinità con una sola gamba, come Houragan
+
+In Borges, *Finzioni*: lo scrittore che vuole riscrivere Don Chisciotte dice che potrebbe farcela, se solo fosse immortale (v. *Breve storia dell'Infinito*). La stessa cosa vale per l'Universo: avendo a disposizione un tempo infinito, la ripetizione è inevitabile.
 
 -->

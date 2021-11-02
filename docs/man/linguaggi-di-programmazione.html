@@ -4,14 +4,14 @@
 </title>
     <meta charset="utf-8" />
     <meta name="viewport"     content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
-    <link rel="canonical"            href="https://chiplusplus.org" />
-    <meta     name="thumbnail"       content="https://chiplusplus.org/assets/img/chi-plus-plus.png" />
+    <link rel="canonical"            href="http://localhost:4000" />
+    <meta     name="thumbnail"       content="http://localhost:4000/assets/img/chi-plus-plus.png" />
     <meta     name="keyword"         content="C'hi, C++, c plus plus, religione, open-source" />
     <meta     name="description"     content="Chi++ - Proposta per una metafisica open-source" />
     <meta property="og:title"        content="I linguaggi di programmazione" />
     <meta property="og:type"         content="website" />    
     <meta property="og:description"  content="Chi++ - Proposta per una metafisica open-source" />
-    <meta property="og:image"        content="https://chiplusplus.org/assets/img/chi-plus-plus.png" />
+    <meta property="og:image"        content="http://localhost:4000/assets/img/chi-plus-plus.png" />
     <meta property="og:image:height" content="260" />
     <link rel=icon href=/assets/img/favicon.ico type=image/x-icon>
     <link href="/assets/fa/css/all.css" rel="stylesheet"> 
@@ -22,9 +22,7 @@
   gtag('config', 'UA-159394431-1');
 </script></head>
 <body class="manuale capitolo ">
-
-    <div id="page">
-
+    <div class="page capitolo">
         <header><nav class="menu-top">
     
     <a title="Vai a: I sistemi di numerazione" 
@@ -54,19 +52,13 @@
     
 </nav>
 </header>
-
-        <main class="pubblicato">
-            
+        <main class="corpo pubblicato">
         
-
-            <h1>
-                I linguaggi di programmazione
+            <h1><a href="#dottrina">
+                I linguaggi di programmazione</a>
             </h1>
-
             <blockquote class="motto">Dio non programma in Assembler con l'Universo</blockquote>
-
-            <section id="testo">
-
+            <section class="testo">
                 <p>Brian Kernigan, disse:</p>
 
 <blockquote>
@@ -107,7 +99,7 @@ La funzione <em>raddoppia</em>, che abbiamo visto prima, tradotta in linguaggio 
         ret
 </code></pre>
 
-<p>I programmi scritti con linguaggi di alto livello, come vedi, sono più facili da scrivere e da correggere, ma sono più lenti da esegure perché il codice deve essere “tradotto” in una forma comprensibile alla CPU.
+<p>I programmi scritti con linguaggi di alto livello, come vedi, sono più facili da scrivere e da correggere, ma sono più lenti da eseguire perché il codice deve essere “tradotto” in una forma comprensibile alla CPU.
 I programmi scritti con linguaggi di basso livello sono più complessi da scrivere o da correggere, ma sono molto più veloci da eseguire perché contengono solo le istruzioni strettamente necessarie a svolgere il compito desiderato.</p>
 
 <hr />
@@ -155,11 +147,14 @@ Per lui è solo la sequenza di byte:</p>
 <p>Noi percepiamo il mondo reale come un insieme di eventi che coinvolgono
 una o più entità.
 Ciascuna entità è identificabile per le sue caratteristiche fisiche e ha un suo modo particolare di reagire agli stimoli esterni.
-Per descrivere le entità, i linguaggi di programmazione hanno i <a href="/man/tipi-di-dato">tipi di dato</a>; per descrivere gli eventi, hanno <a href="/man/espressioni-e-operatori">istruzioni e operatori</a>.
+Per descrivere le entità, i linguaggi di programmazione hanno i 
+<a href="/man/tipi-di-dato" class="xref">tipi di dato</a>; 
+per descrivere gli eventi,
+<a href="/man/operatori" class="xref">istruzioni e operatori</a>
 Un linguaggio di programmazione è tanto più efficace quanto più i suoi tipi di dato e i suoi costrutti sintattici riescono a rappresentare le entità che il programma dovrà gestire.<br />
 Ci sono molti linguaggi di programmazione.
 Ciascun linguaggio sa spiegare bene certe cose e meno bene certe altre.
-Esistono linguaggi che descrivono bene le transazioni bancarie, ma che sono inadatti a gestire il treffico aereo; altri che funzionano molto bene per creare pagine Web, ma con cui sarebbe masochistico scrivere un sistema operativo. 
+Esistono linguaggi che descrivono bene le transazioni bancarie, ma che sono inadatti a gestire il traffico aereo; altri che funzionano molto bene per creare pagine Web, ma con cui sarebbe masochistico scrivere un sistema operativo. 
 Un programmatore che conosce a fondo un certo linguaggio di
 programmazione può utilizzarlo efficacemente per scrivere qualsiasi
 programma, ma a quale prezzo?
@@ -330,30 +325,27 @@ error: invalid operands to binary expression
 È una convenzione.
 Se domani smettessimo di utilizzare i computer, il C non esisterebbe più, perché tutti i suoi costrutti sono legati al funzionamento degli apparati informatici.
 Al contrario, il C++ e tutti i linguaggi che si basano sul paradigma a oggetti hanno una componente filosofica che trascende l’ambito informatico.
-Se domani smettessimo di utilizzare i computer, i costrutti che il C++ ha ereditato dal C non avrebbero più senso, ma i concetti di <a href="/man/classi">classe</a> e di <a href="/man/oggetti">oggetto</a> resterebbero ancora validi.<br />
+Se domani smettessimo di utilizzare i computer, i costrutti che il C++ ha ereditato dal C non avrebbero più senso, ma i concetti di 
+<a href="/man/classi-oggetti" class="xref">classe e di oggetto</a> 
+resterebbero ancora validi.<br />
 Molti pensano che avere dei principii sia limitativo, ma non è vero. 
 Il C non ha principi e i suoi costrutti sono limitati ai tipi di dato
 previsti.
-Il C++, grazie ai suoi principii, ha una maggior duttilità e può evolversi, adattando i suoi costrutti a qualsiasi contesto.</p>
-
-<hr id="dottrina" />
-
-<p>Il Maestro Canaro pensava che la Scienza fosse come il C: uno strumento perfetto per descrivere ciò che ci circonda, ma inadatto a descrivere ciò che trascende la nostra conoscenza diretta.
+Il C++, grazie ai suoi principii, ha una maggior duttilità e può evolversi, adattando i suoi costrutti a qualsiasi contesto.<br />
+Il Maestro Canaro pensava che la Scienza fosse come il C: uno strumento perfetto per descrivere ciò che ci circonda, ma inadatto a descrivere ciò che trascende la nostra conoscenza diretta.
 Il problema, secondo lui, era la matematica.
-Parasfrasando Karl Kraus, diceva che la matematica è una malattia di cui pensa di essere la cura.
+Parafrasando Karl Kraus, diceva che la matematica è una malattia di cui pensa di essere la cura.
 Non so se conosci la frase di André Weil: «Dio esiste perché la matematica è coerente; il Diavolo esiste perché non possiamo dimostrarlo.»
 È vero il contrario.
 I paradossi sono la crittografia di Dio e la matematica è utile non perché quasi sempre è coerente, ma perché, di quando in quando, produce dei paradossi.</p>
 
+<hr id="dottrina" />
 
+<p>Un giorno un discepolo chiese al maestro Canaro: «Maestro, con quale tipo di arco si tira meglio?».<br /> Il maestro rispose: «Con quello che utilizzi tutti i giorni».<br /> Il discepolo chiese allora: «Maestro, questo vuol dire che si può utilizzare uno linguaggio di programmazione inadatto, purché si raggiunga lo scopo?».<br /> Il maestro sorrise benevolmente e disse: «Ti prego, va’ a meditare sull’insensatezza delle tue domande mentre pulisci le latrine comuni.» <br /> Per molto tempo non riuscii a capire il comportamento del maestro <br /> Canaro. Per un po’, credetti che l’errore fosse quel “meglio” nella prima domanda e che il maestro avesse dato una risposta volutamente imprecisa allo scopo di portare alle estreme conclusioni un ragionamento male impostato, ma mi sbagliavo.<br /> La verità era che il maestro Canaro, come mi confessò lui stesso, stava cercando di scaricare su qualcuno il suo turno di pulizia latrine e il giovane e impetuoso discepolo gliene aveva dato occasione.<br /></p>
 
             </section>
-            
-        
-
         
         </main>
-
         <footer>
     <nav>
         
@@ -382,9 +374,6 @@ I paradossi sono la crittografia di Dio e la matematica è utile non perché qua
 
 </footer>
 
-
     </div>
-
   </body>
-
 </html>

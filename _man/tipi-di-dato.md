@@ -11,7 +11,7 @@ La varietà dei tipi di dato disponibili è la caratteristica principale del C++
 
 Il C++ ha ereditato dal C una vasta gamma di tipi di dato.
 A seconda della loro natura, possiamo dividere questi tipi di dato in due gruppi: i dati *scalari* e i dati *aggregati*.  
-I tipi di dato *scalari* sono: `void`, `bool`, `char`, `wchar_t`, `int`, `float`, `double` e permettono di gestre gli elementi classici di un programma: i numeri interi, i numeri decimali, le lettere e i valori booleani.  
+I tipi di dato *scalari* sono: `void`, `bool`, `char`, `wchar_t`, `int`, `float`, `double` e permettono di gestire gli elementi classici di un programma: i numeri interi, i numeri decimali, le lettere e i valori booleani.  
 I tipi di dato *aggregati* sono gli *array*, le *unioni*, gli *emumerati*, le *strutture* e le *classi*. 
 Questi, come dice anche il loro nome, sono costituiti dall'aggregazione di più dati scalari dello stesso tipo o di tipi differenti.  
 Il prossimo brano di codice &mdash; fastidiosamente didascalico, nella sua sostanziale inutilità &mdash; mostra i principali tipi di dato del C++.
@@ -38,15 +38,18 @@ Il tipo di dato `void` non ha né una dimensione né un valore e può essere ass
 Il tipo di dato `bool` è utilizzato per gestire i valori booleani.
 Può assumere solo due valori: `true` o `false`, quindi ha la dimensione minima possibile, ovvero un byte.  
 Il tipo `int` permette di gestire i numeri interi. 
-Di solito ha una dimensione di quattro byte, che può essere aumentata o diminuita per mezzo di parole-chiave dette: [modificatori](#modificatori).  
+Di solito ha una dimensione di quattro byte, che può essere aumentata o diminuita per mezzo di parole-chiave dette: 
+<a href="#modificatori" class="xref">modificatori</a>.  
 I tipi `float` e `double` si utilizzano per gestire i numeri decimali. 
 Hanno una lunghezza di quattro e otto byte rispettivamente e una precisione di sette e quindici cifre decimali.  
-I tre elementi che compaiono al di fuori della funzione `main` sono tipi di dato *aggregati* e permettono di definre dei tipi di dati non standard.  
+I tre elementi che compaiono al di fuori della funzione `main` sono tipi di dato *aggregati* e permettono di definire dei tipi di dati non standard.  
 Gli `enum` permettono di assegnare dei nomi a dei valori, rendendo più facile la programmazione.
-Nell'esempio, l'*enum* `RGB`assegna un nome a tre valori della codifica RGB.
+Nell'esempio, l'*enum* `RGB` assegna un nome a tre valori della codifica RGB.
 Questo nuovo tipo di dato è utilizzato nella struttura `ColoreRGB`.  
 Le `struct` permettono di creare degli insiemi di dati eterogenei.
-La variabile `ColoreRGB` contiene due variabili differenti: un valore di tipo `RGB` e un [puntatore](#puntatori) a carattere.  
+La variabile `ColoreRGB` contiene due variabili differenti: un valore di tipo `RGB` e un 
+<a href="#puntatori" class="xref">puntatore</a>   
+a carattere.  
 Tutti i tipi di dati che abbiamo visto finora sono un retaggio del linguaggio *C*.
 La classe `Colore`, invece, è una delle novità introdotte dal C++ e contiene due elementi: una struttura di tipo `ColoreRGB` e una funzione che mostra il nome del colore.  
 Attenzione, però: nessuno di questi signori è in realtà ciò che afferma di essere.
@@ -107,7 +110,8 @@ unsigned short: 2 bytes, da:                    0  a:                65535
 
 <a id="funzioni"></a>
 L'ultima cosa di cui ti devo parlare, a proposito dei tipi di dato del C++ sono i cosiddetti *attributi intermediari*, ovvero: le *funzioni*, gli *array*, i *puntatori* e le *reference*.  
-Delle *funzioni* parleremo diffusamente [in seguito](/man/funzioni).
+Delle *funzioni* parleremo diffusamente 
+<a href="/man/funzioni" class="xref">in seguito</a>.
 Quello che ci interessa, qui e ora, è che ogni funzione ha un suo tipo di dato.
 La funzione `main`, che è la funzione principale di ogni programma, ha come tipo di dato `int` e infatti si chiude con l'istruzione:
 
@@ -116,7 +120,7 @@ return 0;
 ```
     
 La funzione `nome_colore`, all'interno della classe `Colore` è di tipo `void` e, come puoi vedere, non ha valore di ritorno.  
-Gli *array* sono degli insiemi di dati omogemei e si dichiarano aggiungendo al nome della variabile delle parentesi quadre.
+Gli *array* sono degli insiemi di dati omogenei e si dichiarano aggiungendo al nome della variabile delle parentesi quadre.
 La dimensione dell'array deve essere definita al momento della sua dichiarazione; questo può avvenire o in maniera esplicita, inserendo il numero di elementi fra le parentesi quadre:
 
 ```
@@ -134,7 +138,7 @@ Nel caso dell'array qui sopra, la lettera `a` avrà indice 0, la `b` avrà indic
 
 <hr id="puntatori">
 
-I *puntatori* sono come i pitbull: alla maggior parte delle persone fanno paura, ma chi li conosce sa che sono cani dolcissimi, se li sai trattare.
+I *puntatori* sono come i pit-bull: alla maggior parte delle persone fanno paura, ma chi li conosce sa che sono cani dolcissimi, se li sai trattare.
 Quello che devi tenere sempre a mente è che il *C++* è solo un modo particolare di vedere la memoria del computer e nella memoria non ci sono caratteri, non ci sono classi, non ci sono immagini e non ci sono film porno, ma solo una lunga sequenza di 1 e di 0:
 
 ```
@@ -351,7 +355,8 @@ valori iniziali: v=10, r=10
 valori finali:   v=20, r=20
 ```
 
-Approfondiremo i pro e i contro delle reference quando parleremo delle [funzioni](/man/funzioni).
+Approfondiremo i pro e i contro delle *reference* quando parleremo delle 
+<a href="/man/funzioni" class="xref">funzioni</a>.
 
 <hr id="casting">
 

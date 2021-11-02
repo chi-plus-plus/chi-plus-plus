@@ -4,14 +4,14 @@
 </title>
     <meta charset="utf-8" />
     <meta name="viewport"     content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
-    <link rel="canonical"            href="https://chiplusplus.org" />
-    <meta     name="thumbnail"       content="https://chiplusplus.org/assets/img/chi-plus-plus.png" />
+    <link rel="canonical"            href="http://localhost:4000" />
+    <meta     name="thumbnail"       content="http://localhost:4000/assets/img/chi-plus-plus.png" />
     <meta     name="keyword"         content="C'hi, C++, c plus plus, religione, open-source" />
     <meta     name="description"     content="Chi++ - Proposta per una metafisica open-source" />
     <meta property="og:title"        content="I tipi di dato" />
     <meta property="og:type"         content="website" />    
     <meta property="og:description"  content="Chi++ - Proposta per una metafisica open-source" />
-    <meta property="og:image"        content="https://chiplusplus.org/assets/img/chi-plus-plus.png" />
+    <meta property="og:image"        content="http://localhost:4000/assets/img/chi-plus-plus.png" />
     <meta property="og:image:height" content="260" />
     <link rel=icon href=/assets/img/favicon.ico type=image/x-icon>
     <link href="/assets/fa/css/all.css" rel="stylesheet"> 
@@ -22,9 +22,7 @@
   gtag('config', 'UA-159394431-1');
 </script></head>
 <body class="manuale capitolo ">
-
-    <div id="page">
-
+    <div class="page capitolo">
         <header><nav class="menu-top">
     
     <a title="Vai a: I commenti" 
@@ -54,24 +52,18 @@
     
 </nav>
 </header>
-
-        <main class="pubblicato">
-            
+        <main class="corpo pubblicato">
         
-
-            <h1>
-                I tipi di dato
+            <h1><a href="#dottrina">
+                I tipi di dato</a>
             </h1>
-
             <blockquote class="motto">Tutto è byte</blockquote>
-
-            <section id="testo">
-
+            <section class="testo">
                 <p>La varietà dei tipi di dato disponibili è la caratteristica principale del C++.</p>
 
 <p>Il C++ ha ereditato dal C una vasta gamma di tipi di dato.
 A seconda della loro natura, possiamo dividere questi tipi di dato in due gruppi: i dati <em>scalari</em> e i dati <em>aggregati</em>.<br />
-I tipi di dato <em>scalari</em> sono: <code>void</code>, <code>bool</code>, <code>char</code>, <code>wchar_t</code>, <code>int</code>, <code>float</code>, <code>double</code> e permettono di gestre gli elementi classici di un programma: i numeri interi, i numeri decimali, le lettere e i valori booleani.<br />
+I tipi di dato <em>scalari</em> sono: <code>void</code>, <code>bool</code>, <code>char</code>, <code>wchar_t</code>, <code>int</code>, <code>float</code>, <code>double</code> e permettono di gestire gli elementi classici di un programma: i numeri interi, i numeri decimali, le lettere e i valori booleani.<br />
 I tipi di dato <em>aggregati</em> sono gli <em>array</em>, le <em>unioni</em>, gli <em>emumerati</em>, le <em>strutture</em> e le <em>classi</em>. 
 Questi, come dice anche il loro nome, sono costituiti dall’aggregazione di più dati scalari dello stesso tipo o di tipi differenti.<br />
 Il prossimo brano di codice — fastidiosamente didascalico, nella sua sostanziale inutilità — mostra i principali tipi di dato del C++.
@@ -159,15 +151,18 @@ coloreRGB:green
 Il tipo di dato <code>bool</code> è utilizzato per gestire i valori booleani.
 Può assumere solo due valori: <code>true</code> o <code>false</code>, quindi ha la dimensione minima possibile, ovvero un byte.<br />
 Il tipo <code>int</code> permette di gestire i numeri interi. 
-Di solito ha una dimensione di quattro byte, che può essere aumentata o diminuita per mezzo di parole-chiave dette: <a href="#modificatori">modificatori</a>.<br />
+Di solito ha una dimensione di quattro byte, che può essere aumentata o diminuita per mezzo di parole-chiave dette: 
+<a href="#modificatori" class="xref">modificatori</a>.<br />
 I tipi <code>float</code> e <code>double</code> si utilizzano per gestire i numeri decimali. 
 Hanno una lunghezza di quattro e otto byte rispettivamente e una precisione di sette e quindici cifre decimali.<br />
-I tre elementi che compaiono al di fuori della funzione <code>main</code> sono tipi di dato <em>aggregati</em> e permettono di definre dei tipi di dati non standard.<br />
+I tre elementi che compaiono al di fuori della funzione <code>main</code> sono tipi di dato <em>aggregati</em> e permettono di definire dei tipi di dati non standard.<br />
 Gli <code>enum</code> permettono di assegnare dei nomi a dei valori, rendendo più facile la programmazione.
-Nell’esempio, l’<em>enum</em> <code>RGB</code>assegna un nome a tre valori della codifica RGB.
+Nell’esempio, l’<em>enum</em> <code>RGB</code> assegna un nome a tre valori della codifica RGB.
 Questo nuovo tipo di dato è utilizzato nella struttura <code>ColoreRGB</code>.<br />
 Le <code>struct</code> permettono di creare degli insiemi di dati eterogenei.
-La variabile <code>ColoreRGB</code> contiene due variabili differenti: un valore di tipo <code>RGB</code> e un <a href="#puntatori">puntatore</a> a carattere.<br />
+La variabile <code>ColoreRGB</code> contiene due variabili differenti: un valore di tipo <code>RGB</code> e un 
+<a href="#puntatori" class="xref">puntatore</a> <br />
+a carattere.<br />
 Tutti i tipi di dati che abbiamo visto finora sono un retaggio del linguaggio <em>C</em>.
 La classe <code>Colore</code>, invece, è una delle novità introdotte dal C++ e contiene due elementi: una struttura di tipo <code>ColoreRGB</code> e una funzione che mostra il nome del colore.<br />
 Attenzione, però: nessuno di questi signori è in realtà ciò che afferma di essere.
@@ -290,7 +285,8 @@ unsigned short: 2 bytes, da:                    0  a:                65535
 
 <p><a id="funzioni"></a>
 L’ultima cosa di cui ti devo parlare, a proposito dei tipi di dato del C++ sono i cosiddetti <em>attributi intermediari</em>, ovvero: le <em>funzioni</em>, gli <em>array</em>, i <em>puntatori</em> e le <em>reference</em>.<br />
-Delle <em>funzioni</em> parleremo diffusamente <a href="/man/funzioni">in seguito</a>.
+Delle <em>funzioni</em> parleremo diffusamente 
+<a href="/man/funzioni" class="xref">in seguito</a>.
 Quello che ci interessa, qui e ora, è che ogni funzione ha un suo tipo di dato.
 La funzione <code>main</code>, che è la funzione principale di ogni programma, ha come tipo di dato <code>int</code> e infatti si chiude con l’istruzione:</p>
 
@@ -298,7 +294,7 @@ La funzione <code>main</code>, che è la funzione principale di ogni programma, 
 </code></pre>
 
 <p>La funzione <code>nome_colore</code>, all’interno della classe <code>Colore</code> è di tipo <code>void</code> e, come puoi vedere, non ha valore di ritorno.<br />
-Gli <em>array</em> sono degli insiemi di dati omogemei e si dichiarano aggiungendo al nome della variabile delle parentesi quadre.
+Gli <em>array</em> sono degli insiemi di dati omogenei e si dichiarano aggiungendo al nome della variabile delle parentesi quadre.
 La dimensione dell’array deve essere definita al momento della sua dichiarazione; questo può avvenire o in maniera esplicita, inserendo il numero di elementi fra le parentesi quadre:</p>
 
 <pre><code>char elementi[10];
@@ -314,7 +310,7 @@ Nel caso dell’array qui sopra, la lettera <code>a</code> avrà indice 0, la <c
 
 <hr id="puntatori" />
 
-<p>I <em>puntatori</em> sono come i pitbull: alla maggior parte delle persone fanno paura, ma chi li conosce sa che sono cani dolcissimi, se li sai trattare.
+<p>I <em>puntatori</em> sono come i pit-bull: alla maggior parte delle persone fanno paura, ma chi li conosce sa che sono cani dolcissimi, se li sai trattare.
 Quello che devi tenere sempre a mente è che il <em>C++</em> è solo un modo particolare di vedere la memoria del computer e nella memoria non ci sono caratteri, non ci sono classi, non ci sono immagini e non ci sono film porno, ma solo una lunga sequenza di 1 e di 0:</p>
 
 <pre><code>0100001100100111011010000110000101101110011011100110111100100000
@@ -636,7 +632,8 @@ valori iniziali: v=10, r=10
 valori finali:   v=20, r=20
 </code></pre>
 
-<p>Approfondiremo i pro e i contro delle reference quando parleremo delle <a href="/man/funzioni">funzioni</a>.</p>
+<p>Approfondiremo i pro e i contro delle <em>reference</em> quando parleremo delle 
+<a href="/man/funzioni" class="xref">funzioni</a>.</p>
 
 <hr id="casting" />
 
@@ -716,14 +713,9 @@ Gli spazioni definiscono anche l’unità minima di tempo, quella che il Maestro
 <p>Anche il C’hi++ ritiene simili il Mondo e l’Arte, ma non solo per la loro natura.
 Il Mondo e l’Arte sono simili perché il loro scòpo è lo stesso.</p>
 
-
             </section>
-            
-        
-
         
         </main>
-
         <footer>
     <nav>
         
@@ -752,9 +744,6 @@ Il Mondo e l’Arte sono simili perché il loro scòpo è lo stesso.</p>
 
 </footer>
 
-
     </div>
-
   </body>
-
 </html>

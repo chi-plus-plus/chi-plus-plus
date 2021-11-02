@@ -1,3 +1,88 @@
+## 0.30.11 (November 01, 2021)
+  - Aggiunto Sostiene Aristotele come post e corretti i link nel testo
+  - Rinominata directory _var in _note. A
+
+## 0.30.10 (November 01, 2021)
+  - Aggiunti link di paginazione ai post.
+  - Corretto foglio di stile
+  - Terminata revisione errori di battitura
+
+## 0.30.9 (October 30, 2021)
+  - Revisione errori di battitura fino a capitolo Processore
+  - Aggiunta foto del cane Lele alla pagina dei ringraziamenti
+
+## 0.30.8 (October 17, 2021)
+  - Rivisto incipit e capitolo sui linuguaggi di programmazione
+  - Modificata dichiarazione classe Dio
+  - Corretti i link errati
+  - Rimossi link con formato Jekill
+  - Rvisione dello script per la generazione del file PDF unico
+  - Corretto errore nelle pagine di servizio
+
+## 0.30.7 (October 12, 2021)
+  - Rinominato file unico in pdf.html
+  - Rivisti stili pagina per omogeneità com documento unico
+  - Sostituiti ID CSS con class per evitare conflitti nella generazione del PDF
+  - Rimossi documenti ridondanti perché già pubblicati su sito Canaro
+
+## 0.30.6 (October 09, 2021)
+  - Aggiornato script bump_version
+  - Rivisto testo capitolo sulla memoria
+  - Modificato il foglio di stile per il PDF
+  - Corretto file per la generazione del PDF
+  - Aggiunto foglio di stile per PDF
+  - Rimossa la directory _opt; trasferiti i testi su canaro.net
+  - Iniziato script di conversione del testo in PDF
+  - Corretto script per purge della cache Cloudflare
+
+## 0.30.5 (October 05, 2021)
+  - Revisione del capitolo sul Polimorfismo
+
+## 0.30.4 (September 25, 2021)
+  - Completata prima stesura del capitolo sul polimorfismo
+  - Modificato capitolo sulle classi
+  - Aggiunto paragrafo sul concetto di Vero per filosofi, scienziati e informatici
+
+## 0.30.3 (September 19, 2021)
+  - Aggiunti 10C rivisti da Maestro Canaro
+  - Rivisto testo dei Dicei Comandamenti
+  - Integrato testo finale del capitolo sul debug
+
+## 0.30.2 (September 17, 2021)
+  - Redazione del testo del capitolo sul Polimorfismo
+  - Spostato testo su terraferma alla fine del capitolo sul debug
+
+## 0.30.1 (September 17, 2021)
+  - Redazione del capitolo sul polimorfismo
+  - Aggiunta citazione da Santillana a Debug
+  - Corretti errori di battitura nel testo della Proposta
+  - Corretti errori di battitura nel testo della pagina Index
+  - Aggiunte note a e-book
+
+## 0.30.0 (September 12, 2021)
+  - Revisione generale del testo
+  - Suddivisi gli appunti in NOTE.md fra capitoli e TODO
+  - Rivisto il testo dell'Universo in C++
+  - Rimossi dalla directory _var i testi obsoleti
+
+## 0.29.3 (September 12, 2021)
+  - Chiusa prima stesura del capitolo sul debug
+  
+## 0.29.2 (September 10, 2021)
+  - Redazione del capitolo sul debug
+  - Aggiunto testo Penetration
+  - Aggiunta nota su nascita del gioco degli Scacchi
+
+## 0.29.1 (September 08, 2021)
+  - Redazione del capitolo sul debug
+
+## 0.29.0 (September 05, 2021)
+  - Redazione del testo del capitolo sul debug. 
+  - Revisione delle note e delle citazioni.
+
+## 0.28.5 (September 02, 2021)
+  - Completata prima stesura del capitolo sugli stream
+
 ## 0.28.4 (August 25, 2021)
   - Redazione capitolo stream - precision, fill, width
   - Redazione capitolo stream - Output esempio eccezioni

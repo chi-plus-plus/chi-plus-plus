@@ -49,7 +49,7 @@ raddoppia(long):
         ret
 ```
 
-I programmi scritti con linguaggi di alto livello, come vedi, sono più facili da scrivere e da correggere, ma sono più lenti da esegure perché il codice deve essere “tradotto” in una forma comprensibile alla CPU.
+I programmi scritti con linguaggi di alto livello, come vedi, sono più facili da scrivere e da correggere, ma sono più lenti da eseguire perché il codice deve essere “tradotto” in una forma comprensibile alla CPU.
 I programmi scritti con linguaggi di basso livello sono più complessi da scrivere o da correggere, ma sono molto più veloci da eseguire perché contengono solo le istruzioni strettamente necessarie a svolgere il compito desiderato. 
 
 ---
@@ -97,11 +97,14 @@ Invertendo questi concetti, una volta il Maestro Canaro disse:
 Noi percepiamo il mondo reale come un insieme di eventi che coinvolgono
 una o più entità.
 Ciascuna entità è identificabile per le sue caratteristiche fisiche e ha un suo modo particolare di reagire agli stimoli esterni.
-Per descrivere le entità, i linguaggi di programmazione hanno i [tipi di dato](/man/tipi-di-dato); per descrivere gli eventi, hanno [istruzioni e operatori](/man/espressioni-e-operatori).
+Per descrivere le entità, i linguaggi di programmazione hanno i 
+<a href="/man/tipi-di-dato" class="xref">tipi di dato</a>; 
+per descrivere gli eventi,
+<a href="/man/operatori" class="xref">istruzioni e operatori</a>
 Un linguaggio di programmazione è tanto più efficace quanto più i suoi tipi di dato e i suoi costrutti sintattici riescono a rappresentare le entità che il programma dovrà gestire.  
 Ci sono molti linguaggi di programmazione.
 Ciascun linguaggio sa spiegare bene certe cose e meno bene certe altre.
-Esistono linguaggi che descrivono bene le transazioni bancarie, ma che sono inadatti a gestire il treffico aereo; altri che funzionano molto bene per creare pagine Web, ma con cui sarebbe masochistico scrivere un sistema operativo. 
+Esistono linguaggi che descrivono bene le transazioni bancarie, ma che sono inadatti a gestire il traffico aereo; altri che funzionano molto bene per creare pagine Web, ma con cui sarebbe masochistico scrivere un sistema operativo. 
 Un programmatore che conosce a fondo un certo linguaggio di
 programmazione può utilizzarlo efficacemente per scrivere qualsiasi
 programma, ma a quale prezzo?
@@ -267,18 +270,20 @@ Il C è un linguaggio che non va oltre l'ambito per cui è stato creato.
 È una convenzione.
 Se domani smettessimo di utilizzare i computer, il C non esisterebbe più, perché tutti i suoi costrutti sono legati al funzionamento degli apparati informatici.
 Al contrario, il C++ e tutti i linguaggi che si basano sul paradigma a oggetti hanno una componente filosofica che trascende l'ambito informatico.
-Se domani smettessimo di utilizzare i computer, i costrutti che il C++ ha ereditato dal C non avrebbero più senso, ma i concetti di [classe](/man/classi) e di [oggetto](/man/oggetti) resterebbero ancora validi.  
+Se domani smettessimo di utilizzare i computer, i costrutti che il C++ ha ereditato dal C non avrebbero più senso, ma i concetti di 
+<a href="/man/classi-oggetti" class="xref">classe e di oggetto</a> 
+resterebbero ancora validi.  
 Molti pensano che avere dei principii sia limitativo, ma non è vero. 
 Il C non ha principi e i suoi costrutti sono limitati ai tipi di dato
 previsti.
-Il C++, grazie ai suoi principii, ha una maggior duttilità e può evolversi, adattando i suoi costrutti a qualsiasi contesto.
-
-<hr id="dottrina">
-  
+Il C++, grazie ai suoi principii, ha una maggior duttilità e può evolversi, adattando i suoi costrutti a qualsiasi contesto.  
 Il Maestro Canaro pensava che la Scienza fosse come il C: uno strumento perfetto per descrivere ciò che ci circonda, ma inadatto a descrivere ciò che trascende la nostra conoscenza diretta.
 Il problema, secondo lui, era la matematica.
-Parasfrasando Karl Kraus, diceva che la matematica è una malattia di cui pensa di essere la cura.
+Parafrasando Karl Kraus, diceva che la matematica è una malattia di cui pensa di essere la cura.
 Non so se conosci la frase di André Weil: «Dio esiste perché la matematica è coerente; il Diavolo esiste perché non possiamo dimostrarlo.»
 È vero il contrario.
 I paradossi sono la crittografia di Dio e la matematica è utile non perché quasi sempre è coerente, ma perché, di quando in quando, produce dei paradossi.  
- 
+
+<hr id="dottrina">
+
+{{ site.data.canaro.arco-meglio }}

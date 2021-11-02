@@ -1,10 +1,10 @@
 ---
-status:     bozza
+status:     pubblicato
 layout:     manuale
 class:      capitolo
 title:      Il polimorfismo
 permalink:  /man/polimorfismo
-quote:      "When Me they fly, I am the wings<br />I am the doubter and the doubt"
+quote:      "When Me they fly, I am the wings<br />I am the double and the int"
 ---
 
 Come avrai certamente intuito da tutto ciò che abbiamo detto finora, la caratteristica principale del C++ è il polimorfismo.  
@@ -292,6 +292,7 @@ Puoi risparmiarti questa seccatura ridefinendo solo il com­portamento degli ope
 ```
 {% include_relative src/polimorfismo-cast.cpp %}
 ```
+
 <hr id="template">
 
 L'ultima cosa di cui ti devo parlare, a proposito del polimorfismo, sono i *template*.  
@@ -368,7 +369,7 @@ L'istruzione:
 cout << MAGGIORE('a', b) << endl; 
 ```
 
-compara un carattere con un double e, senza dare problemi in compilazione torna il valore `97`, corrispondente al codice ASCII della lettera `a`.
+compara un carattere con un double e, senza dare problemi in compilazione torna il valore `97`, corrispondente al codice ASCII della lettera `a`. 
 Al contrario, l'istruzione:
 
 ```
@@ -526,6 +527,81 @@ che corrisponde ai caratteri della stringa *PippoPluto* incrementati di un'unit�
 
 <hr id="dottrina">
 
+Da migliaia di anni, gli uomini cercano di capire quale sia il significato dell'Esistenza.  
+Le risposte che si sono dati variano a seconda del periodo storico e del territorio in cui il profeta o il filosofo ha vissuto, ma hanno tutte una particolarità: richiedono ai loro seguaci l'accettazione di postulati non dimostrabili, come l'esistenza di una o più divinità o di stati di esistenza diversi da quello che conosciamo. 
+Anche la Scienza ha provato a dare delle risposte agli stessi interrogativi, ma la sua indagine si è limitata agli aspetti pratici del problema: ha prodotto delle interessanti teorie sulla genesi dell'Universo e sugli eventi che hanno portato alla nostra esistenza, ma non si è mai pronunciata su quello che potrebbe essere il nostro ruolo in tutto ciò, con le conseguenze di cui abbiamo parlato durante <a href="/man/memoria#delete" class="xref">la lezione sulla memoria</a>.  
+Il Maestro Canaro, che non riusciva ad accettare né i dogmi delle religioni tradizionali né lo scollamento fra uomo e Universo prodotto dalle ipotesi scientifiche, si pose una domanda:
+
+> È possibile dare una spiegazione dell’Esistenza sfruttando solo ciò di cui abbiamo esperienza diretta? 
+
+La maggior parte delle religioni, per “funzionare”, richiede da una a tre dimensioni aggiuntive, oltre quelle note; la Scienza, per le sue *super-stringhe* ha bisogno almeno di sette dimensioni aggiuntive, ovvero il doppio di quelle che servono per un Aldilà non spirituale. 
+Esiste una spiegazione più semplice?  
+Non essendo né un filosofo né un mistico, approcciò lo sviluppo della sua dottrina come se fosse stata un sistema software.
+Per prima cosa fece un'analisi del "sistema in esercizio", evidenziandone i principali difetti; poi identificò delle vulnerabilità logiche delle religioni canoniche e definì delle linee-guida atte a prevenirle; infine, descrisse le caratteristiche del C'hi++, spiegando come queste avrebbero potuto risolvere alcuni dei problemi evidenziati in precedenza. 
+Come scrisse nella <a href="/proposta#errori" class="xref">Proposta</a>, ci sono dei “bug” che possiamo considerare comuni a tutte le metafisiche:
+
+> {{ site.data.canaro.errori-religioni }}
+
+ed altri, che possiamo considerare comuni agli esseri umani:
+
+> {{ site.data.canaro.errori-umani }}
+
+Per correggere o quanto meno mitigare questi problemi, la sua metafisica avrebbe dovuto:
+
+> {{ site.data.canaro.chi-requisiti }}
+
+Il Maestro Canaro applicò allo sviluppo della sua *metafisica-non-metafisica* lo stesso approccio che adottava quando doveva realizzare un software. 
+Ci sono due modi diversi di progettare un software: il primo consiste nell'analizzare tutti i sistemi che svolgono azioni simili, prendere il meglio di ciascuno e metterlo nel nuovo sistema; in alternativa, si può progettare il sistema da zero e solo quando se ne è definita per grandi linee la struttura, studiare le soluzioni adottate dagli altri, integrandole nel proprio programma, se lo si ritiene utile.
+Il primo approccio è più rapido e sicuro, ma tende a produrre risultati ripetitivi; il secondo approccio è più complesso, sia in termini di analisi che di implementazione, ma facilita l'innovazione perché l'immaginazione dell'analista non è condizionata da ciò che ha visto.  
+Essendo un sostenitore del secondo metodo, il Maestro Canaro lo applicò anche al C'hi++ e, dopo una decina di anni di studio, arrivò alla conclusione che non solo è possibile ipotizzare una cosmogonia quasi del tutto priva di elementi metafisici (non del tutto priva, perché, come vedremo <a href="/man/stream#dottrina" class="xref">in seguito</a>, una dose minima di trascendenza è necessaria per garantire la buona funzionalità della dottrina), ma che i precetti di questa dottrina erano compatibili con molti  principii delle religioni canoniche.  
+
+<hr id="portabilita">
+
+Il C'hi++ ereditò alcuni concetti proprii delle filosofie note al Maestro Canaro, come il dualismo Gravità/Elettricità elaborato da Poe in *Eureka*, che lo aveva affascinato per il modo in cui trasformava una forza cieca e inspiegabile come la Gravità nell'intenzione, cosciente, di tutto ciò che esiste di tornare a essere Uno.
+D'altro canto, la dottrina del Maestro Canaro rinnegò alcuni concetti comuni a molte religioni, come la possibilità di sottrarsi al ciclo delle rinascite o la presenza di punizioni o premii *ad-personam*.  
+Così come quando si analizza il funzionamento di un software non ci si cura delle singole variabili, ma si pensa al flusso complessivo del sistema, così il C'hi++ vede l'esistenza non in termini di interazioni fra individui, ma come l'evoluzione del flusso dell'Energia dell'Uno all'interno della matrice tridimensionale degli spazioni. 
+Per il C'hi++ non esistono né anime, né fiumi infernali e chi muore in mare non troverà ad accoglierlo Rán, nella sua birreria in fondo al mare, ma verrà semplicemente riciclato, come le aree di memoria RAM all'interno di un computer.  
+Le nostre esistenze sono incidentali; pensare di punirle o di premiarle non avrebbe senso e contrasterebbe con il principio generale che tutto ciò che esiste è la manifestazione di un'unica Entità.
+Come ti ho detto all'inizio di queste lezioni, non è possibile andare in Paradiso o all'Inferno da soli: qualunque cosa avvenga, nell'Universo, ci riguarda tutti.  
+Questo però non vuol dire che il C'hi++ rifiuti *in toto* tutti concetti delle religioni che lo hanno preceduto; anzi.
+Molti precetti del C'hi++ sono compatibili con precetti o idee appartenenti ad altre mistiche o filosofie e si tratta spesso di filosofie che il Maestro Canaro non conosceva, quando pose la basi della sua dottrina.
+Per esempio, il Maestro Canaro non lesse mai (con suo grande rammarico) la *Divina Commedia*; ciò non ostante, il C'hi++ ha un punto di contatto con la visione dantesca dell'Aldilà nell'importanza del pentimento.
+Dante mette in Purgatorio i peccatori che hanno capito di aver sbagliato, mentre condanna all'Inferno quelli che, malgrado tutto, non riescono a prendere coscienza delle proprie colpe. 
+Come abbiamo detto <a href="/man/istruzioni-condizionali#pentimento" class="xref">in precedenza</a> e come vedremo durante la lezione sul <a href="/man/debug#pentimento" class="xref">debug</a>, il C'hi++ concorda con questa idea.  
+Similmente, ci sono diverse affinità fra i C'hi++ e la *Bhagavad-Gita*, anche se lui lesse mentre stava redigendo la *Proposta*, quando i punti nodali del suo Credo erano già stati definiti.  
+Oltre alla citazione che ti ho fatto parlando del <a href="/man/programmatore#azione" class="xref">programmatore</a>, ci sono dei brani che ricordano molto le affermazioni contenute in *Sostiene Aristotele*; per esempio, sulla natura dell'Universo:
+
+> {{ site.data.citazioni.gita.caos }}
+> {{ site.data.citazioni.gita.cicli }}
+
+O sul dualismo Gravità/Entropia :
+
+> {{ site.data.citazioni.gita.dualismo }}
+
+O su quelli che io ho definito i *Post-It*:
+
+> {{ site.data.citazioni.gita.vasana }}
+
+Puoi trovare delle analogie con i precetti del C'hi++ anche nel *Mantiq al-Tayr*:
+
+> {{ site.data.citazioni.mantiq.tutto }}
+
+o anche: 
+
+> {{ site.data.citazioni.mantiq.male }}
+
+Per certi versi anche la stessa Genesi biblica può essere considerata un'allegoria della cosmogonia spazionista: il Paradiso è l'Uno primigenio, mentre Adamo (*Puruṣa*) ed Eva (*Prakṛti*) sono l'Ente che ne causa la disgregazione, generando un Universo dove si partorisce nel dolore e dove ci si deve guadagnare il pane con il sudore della fronte.  
+Il Maestro Canaro pensava che tutto questo fosse normale.
+Come scrisse nel <a href="https://github.com/chi-plus-plus/chi-plus-plus/blob/master/MANIFEST.md" target="github">MANIFEST</a> GitHub del C'hi++:  
+
+> {{ site.data.canaro.metafisiche }}
+
+In una nota della mappa mentale su cui basò lo sviluppo iniziale della dottrina, aggiunse:
+
+> {{ site.data.canaro.religioni-oo }}
+
+<hr id="igm">
+
 Fra il C'hi++ e le religioni canoniche c'è la stessa differenza che passa fra una mappa topografica e un'immagine da satellite.  
 Quel senza Dio di Dawkins, ha detto che: 
 
@@ -551,75 +627,31 @@ se ti sei perso in un bosco o in mezzo ai monti, una mappa topografica, proprio 
 Il C'hi++ non cerca di rubare fedeli alle religioni canoniche.
 Non avrebbe senso: sarebbe come cercare di convincere chi sia già sposato con l'amore della sua vita a fare un matrimonio di interesse: se tu hai la Fede non hai bisogno di conferme razionali; possono compiacerti, ma non ti sono necessarie. 
 Il C'hi++, però, può dare forza a quelle (tante) persone che *ancora credono in tutto ciò in cui più nessuno crede*, come li descrisse Longanesi; quella *Banda degli Onesti*<a href="/man/note#banda-onesti" class="nota"></a> che tutti i giorni fa il proprio dovere al meglio possibile anche se non gli conviene, anche tutto e tutti intorno a loro sembrano spingerli all'egoismo e all'indifferenza.
-
-
-<!--
-
 Può aiutarli a non arrendersi e può insegnare loro che non è importante vincere le partite, ma giocare sempre meglio.
 Riconoscere gli sbagli che si sono fatti, imparare da essi e cercare di non ripeterli più, partita dopo partita, in una ricerca continua del meglio.
 Se si comporteranno così, qualunque sarà il loro lavoro, fosse anche pulire i cessi, sarà comunque Arte.
 
+<!--
+
 Data una classe: `umano` si possono ridefinire gli operatori di relazione per capire se un oggetto sia piò o meno ricco o più o meno giovane di un altro, ma sarebbe estremamente complesso scrivere una funzione che permetta di capire se un oggetto sia più o meno amato da un altro.
 Nel caso di oggetti che hanno una linea genealogica comune, la funzione potrebbe basarsi, come dice Dawkins, sulla percentuale di DNA che i due oggetti condividono, moltiplicata per il tempo passato insieme, tenendo conto anche di com'è stato quel tempo, ma nel caso di due oggetti che appartengono a genealogie differenti, quale sarebbe l'algoritmo?
 
-Riprendere la genealogia di classi del capitolo precedente ed esaminare la funzione virtuale pura `isGood` nelle sue variazioni: nel caso della classe `Mare`, il risultato è già definito perché lo ha determinato Dio; per le altre classi, non è altrettanto certo.
+Riprendere la genealogia di classi dell'esempio classi-dio.cpp ed esaminare la funzione virtuale pura `isGood` nelle sue variazioni: nel caso della classe `Mare`, il risultato è già definito perché lo ha determinato Dio; per le altre classi, non è altrettanto certo.
 Ogni categoria ha una sua implementazione di questa funzione, uno specifico criterio di riscontro per determinare ciò che debba essere considerato ben fatto. 
 Per alcuni è il pubblico: il droghiere ti chiede di assaggiare le olive, lo scrittore ti fa leggere ciò che ha scritto, l'attore aspetta la risata o l'applauso alla fine della scena.
-Per i filosofi è `true` tutto ciò che può essere descritto con le parole; per gli scienziati, tutto ciò che può essere descritto dalla matematica; per gli informatici è `true` tutto quello che può essere descritto dal codice. 
 
-v. Kant citato da Hertha von Dechend nella prefazione tedesca a Il Mulino di Amleto
-
-Le diverse religioni, possono essere delle forme derivate di una stessa mistica iniziale?
-Esistono dei "dati membro" e delle funzioni comuni, che siano state ridefinite con il passare del tempo, ma che facciano capo a un corpo di credenze (o di nozioni) iniziale?
-Anche solo in questa mappa, se ne trovano diverse (p.es. Empedocle -&gt; Poe).
-Così come le classi di un lunguaggio OO sono ridefinite per adattarsi a uno specifico contesto di utilizzo, così pure la Mistica iniziale potrebbe essere stata "overloaded" per adattarsi a uno specifico luogo o tempo.
-Se fosse così, tanto più si va indietro nel tempo, e quindi nella gerarchia di classi, tanto più ci si dovrebbe avvicinare alle caratteristiche proprie della Mistica.
-E' possibile definire una gerarchia di classi figlie della classe astratta "credo"?(semplificando molto, visto che sono le 3 di notte) Budda e Zoroastro influenzano i greci, che influenzano gli ebrei, che a loro volta infulenzano i cristiani, che alla fine producono i Testimoni di Geova...
-Allo stesso modo (sempre semplificando), dal C si è evoluto il C++ e dal C++, Java.Sfortunatamente, però, i (cattivi) programmatori Java hanno fatto alla programmazione quello che i cattolici hanno fatto al cristianesimo.
-V. Corano
-
-Quando il programmatore definisce un nuovo tipo di dato per mezzo di una o più classi, può allo stesso tempo istruire le funzioni e gli operatori del linguaggio ad utilizzarlo correttamente.
-
-Noi viviamo prevalentemente sulla terraferma e riteniamo perciò che la normalità sia questa. Se però si trascorre un lungo periodo di tempo su una nave o in un'isola, si ha modo di capire come la normalità sia l'acqua e la terra sia solo un'eccezione.
-Similmente, noi diamo grande importanza al ciclo di nascita, riproduzione e morte che chiamiamo "vita" e in essa vediamo il fine ultimo dell'Universo, dimenticandoci che la vita è solo un caso particolare di esistenza e che un universo di sassi sarebbe comunque prodigioso.
-Ciascuna forma di vita consociata, per poter sopravvivere, richiede la legittimazione di alcune follie biologiche.
-Il rispetto di queste follie, essendo in-naturale, richiede l'istituzione di un livello superiore di costrizione, ovvero un corpo di regole formali ancora più distante del precedente dal comportamento biologico degli esseri viventi.
-Con il passare del tempo, molte di queste convenzioni nate in seguito a esigenze contingenti, finiscono inevitabilmente per contrastare con il senso comune di giustizia e devono essere o abolite o modificate, solo che ciascuna modifica o adattamento invece di renderle più "giuste", le allontana ulteriormente dal loro scòpo iniziale e le rende soggette a interpretazioni errate o addirittura opposte a quelle che era il loro fine primario.
-Sant'Agostino ha detto la stessa cosa, ma molto meglio di quanto stia facendo io adesso.
-Si vede che era sobrio.
+@todo: trovare il riferimento bibliografico per il prossimo paragrafo; so che esiste, ma non mi ricordo quale fosse - Le religioni nate in zone temperate, con abbondanza di acqua e di cibo, hanno un pantheon di divinità più o meno benevole, mentre quelle nate in zone aspre hanno un numero ristretto di Dei, più severi. 
 
 La specializzazione come un male.
-
 "La specializzazione va bene per gli insetti" (dove l'ho letto?)
-
 Un tempo, l'uomo virtuoso sapeva fare molte cose, più o meno bene.
 Ora se ne sa fare solo una, benissimo.
 Si cerca l'eccesso, il continuo superamento del limite.
 
-Lo sport (citare Arlìa?), da attività formativa è diventato una forma di intrattenimento e, come tale, deve essere sempre più spettacolare.
-Lo sportivo è visto come un costoso strumento usa e getta.
-
-È però importante che il polimorfismo non dia luogo ad anfibologie.
-Non ti dirò cosa vuol dire, cercalo sul vocabolario come ho fatto io.
-
-parlare degli operatori di cast 
+parlare degli operatori di cast:
 dynamic_cast <new_type> (expression)
 reinterpret_cast <new_type> (expression)
 static_cast <new_type> (expression)
 const_cast <new_type> (expression)
-
-@todo: verificare
-Se eliminassimo le parentesi nell'istruzione di output finale:
-
-```
-cout << (a + b + a) << endl;
-```
-
-otterremmo un errore di compilazione, perché non esiste un operatore `+` capace di gestire la somma di un `int` (il tipo tornato dalla somma di `a + b`) con un oggetto di classe `A`.
-
-```
-{% include_relative src/polimorfismo-operatore-simmetrico.cpp %}
-```
-
 
 -->
