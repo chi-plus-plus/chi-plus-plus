@@ -78,11 +78,11 @@ Il primo è decidere a quale spiritualità fare riferimento.
 Ovviamente non potrà essere una delle religioni canoniche, perché così facendo allontaneremmo gli appartenenti alle altre Fedi.
 Dovrà essere una nuova filosofia di vita che contrasti il meno possibile con le convinzioni degli altri gruppi religiosi.
 Inoltre sarà bene non definirla *religione*, perché molte persone hanno un'istintiva (e non del tutto immotivata) diffidenza nei confronti di questo termine perché le attribuiscono colpe che in realtà andrebbero imputate al clero e ai fedeli e vedono il *religare* da cui trae origine come un legame restrittivo da cui è bene sottrarsi.
-La chiameremo perciò: *Metafisica*, anche se di metafisico avrà ben poco, per non rischiare di allontanare..
+La chiameremo perciò: *Metafisica* per non rischiare di allontanare..
 
 > quei tanti che ancora credono in tutto ciò in cui più nessuno crede
 
-come li descrisse Longanesi; quella *Banda degli Onesti* che tutti i giorni fa il proprio dovere al meglio possibile anche se non gli conviene.
+come li descrisse Longanesi; quella *Banda degli Onesti* che tutti i giorni fa il proprio dovere al meglio possibile anche quando non gli conviene.
 
 Per riprendere il paragone calcistico fatto prima, C'hi++ non cercherà calciatori negli altri campionati.
 Chi ha la Fede non ha bisogno di conferme razionali; possono compiacerlo, ma non gli sono necessarie.
@@ -129,6 +129,7 @@ L'ho trasformato perciò in [un documento a sé stante](https://chiplusplus.org/
 Se volete sapere qualcosa di più sul *C'hi++*, vi suggerisco di leggere [**Proposta per una metafisica open-source**](https://chiplusplus.org/proposta/).
 
 Il testo del manuale è all'indirizzo: <a href="https://chiplusplus.org" target="chi" >chiplusplus.org</a>. 
+Se non avete o tempo o voglia di leggerlo tutto (probabile), leggete almeno <a href="https://chiplusplus.org/man/memoria#delete" target="chi" >questo brano del capitolo sulla mamoria</a>.
 
 Se volete collaborare o anche esporre delle critiche, potere farlo con gli strumenti canonici di GitHub.
 

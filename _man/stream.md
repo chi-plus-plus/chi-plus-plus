@@ -1,11 +1,13 @@
 ---
-status:     pubblicato
-layout:     manuale
 class:      capitolo
+layout:     manuale
 no-index:   true
-title:      Gli stream
+og_desc:    "Problemi esistenziali del codice di esempio - Un hard-disk meta-fisico - Mezzo secolo di fallimenti ideologici - Etica degli Scacchi - John Lennon se l'è cercata."
+og_img:     "/assets/img/og-img/stream.jpg"
 permalink:  /man/stream
 quote:      "Non puoi immergere i tuoi byte due volte nello stesso stream"
+status:     pubblicato
+title:      Gli stream
 ---
 
 Oggi ti parlerò degli *stream* che, com'è noto, sono la componente più importante del C++.
@@ -154,7 +156,7 @@ Il dato membro `iostate`, che utilizzeremo in uno dei prossimi esempii, contiene
 |*badbit*   | L'ultima operazione di I/O non era valida.
 |*hardfail* | Si è verificato un errore irrecuperabile.
 
-Entrambi questi dati membro sono delle <a href="/man/note#bitmask" class="xref">bitmask</a>, quindi possono contenere più di un valore.
+Entrambi questi dati membro sono delle bitmask<a class="nota" href="/man/note#bitmask" id="bitmask"></a>, quindi possono contenere più di un valore.
 L'istruzione seguente, per esempio, apre uno stream su file combinando in `OR` tre possibili valori per `openmode`:
 
 ```
@@ -498,7 +500,7 @@ Si può fare, ma è sbagliato e limitativo.
 È sbagliato, perché le regole che si definiscono sono sempre una conseguenza di esigenze contingenti (guerre, sopraffazioni, disparità sociali), venendo a mancare le quali lo schema logico del sistema perde di significato e si disgrega.
 È limitativo, perché restringe il numero dei possibili obiettivi da perseguire a un insieme finito di azioni o traguardi, raggiunti i quali non esiste più possibilità di migliorare.  
 Pensa al gioco degli Scacchi: non esiste nessun motivo, all’interno della scacchiera, che costringa ciascun pezzo a muoversi solo in una specifica maniera.
-Le torri si muovono in orizzontale, gli alfieri in diagonale e il cavallo salta con una traiettoria a “L” in ossequio a delle regole definite al di fuori della scacchiera<a href="/man/note#scacchi" class="nota"></a>, ma è proprio da queste limitazioni che deriva il fascino del gioco. 
+Le torri si muovono in orizzontale, gli alfieri in diagonale e il cavallo salta con una traiettoria a “L” in ossequio a delle regole definite al di fuori della scacchiera<a class="nota" href="/man/note#scacchi" id="scacchi"></a>, ma è proprio da queste limitazioni che deriva il fascino del gioco. 
 Al contrario, la Società moderna è una scacchiera in cui ciascun pezzo si muove nella maniera che preferisce perché, in ossequio a un malinteso senso di libertà, sono state eliminate tutte le regole. 
 Le persone di successo che si privano della vita sono pedoni che, arrivati alla fine della scacchiera grazie alla loro abilità, hanno scoperto che non esiste alcuna forma di promozione, perché insieme alle regole sono stati aboliti anche i giocatori.
 

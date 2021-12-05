@@ -1,10 +1,12 @@
 ---
-status:     pubblicato 
-layout:     manuale
 class:      capitolo
-title:      I tipi di dato
+layout:     manuale
+og_desc:    "L'Universo è fatto di spazioni - Il Mondo ha la natura dell’Arte - René Guenon aveva ragione - Perché la luce non può andare più veloce."
+og_img:     "/assets/img/og-img/tipi-di-dato.jpg"
 permalink:  /man/tipi-di-dato
 quote:      "Tutto è byte"
+status:     pubblicato 
+title:      "I tipi di dato"
 ---
 
 La varietà dei tipi di dato disponibili è la caratteristica principale del C++.
@@ -402,7 +404,7 @@ La stessa cosa avviene con gli spazioni, solo che invece di essere disposti su u
 <!--
 Più precisamente, hanno "un'esistenza perpetua e non causata", come gli atomi del Vājasaneyī Saṃhitā (IV,1), citato da Ananda in Tempo ed Eternità.
 -->
-Quando il *Big Bang* irradia la sua Energia nell'Universo, questa colpisce gli spazioni dando loro una massa e generando tutto ciò che esiste, dagli atomi di elio della nebulosa di *Wolf–Rayet* alla tua maestra delle Elementari.  
+Quando il *Big Bang* irradia la sua Energia nell'Universo, questa colpisce gli spazioni dando loro una massa e generando tutto ciò che esiste, dalle nebulose di *Wolf–Rayet* alla tua maestra delle Elementari.  
 Così come un `char`, `double` o `class` sono solo dei nomi convenzionali per degli insiemi di bit, anche `elio`, `tungsteno` o `cocomero` sono nomi convenzionali per delle quantità di energia.
 *Energia*, bada bene, non *spazioni*, perché gli spazioni sono fissi; quella che si muove è l'Energia.
 Quando tu sposti il braccio come hai fatto adesso, non stai realmente spostando il braccio, ma trasferendo l'energia che costituiva il tuo braccio da un gruppo di spazioni a un altro.
@@ -411,11 +413,11 @@ Né io né te siamo, adesso, costituiti dagli stessi spazioni che eravamo pochi 
 Siamo un'immagine in movimento, come il puntatore del mouse, o come le luci delle decorazioni natalizie.
 Come disse Sant'Agostino, siamo, allo stesso tempo, reali e illusorii:
 
-> {{ site.data.citazioni.agostino }} <a href="/man/note/#agostino" class="nota"></a>
+> {{ site.data.citazioni.agostino }} <a id="agostino" href="/man/note#agostino" class="nota"></a>
 
 Per i *Vedanta*, il Mondo ha la natura dell'Arte perché la realtà dell'arte-fatto è differente dalla realtà dell'arte-fice.
 Questa similitudine, oltre che per Platone, è valida anche per i linguaggi di programmazione: un oggetto all'interno di un programma esiste, ma non è realmente ciò che rappresenta, anche se a noi fa comodo ritenerlo tale.
-Come scrisse Ezra Pound<a id="pound" href="/man/note/#pound" class="nota"></a>, solo i sogni esistono realmente, perché la loro natura irreale rimane tale anche in una realtà illusoria.
+Come scrisse Ezra Pound<a id="pound" href="/man/note#pound" class="nota"></a>, solo i sogni esistono realmente, perché la loro natura irreale rimane tale anche in una realtà illusoria.
 
 ---
 

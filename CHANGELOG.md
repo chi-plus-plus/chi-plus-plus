@@ -1,3 +1,104 @@
+## 0.30.32 (December 04, 2021)
+  - Rivisti stili dell'indice del Manuale
+
+## 0.30.31 (December 03, 2021)
+  - Rivisti campi og-desc dei capitoli del Manuale
+
+## 0.30.30 (December 03, 2021)
+  - Revisione del campo og-desc dei capitoli del Manuale
+
+## 0.30.29 (December 03, 2021)
+  - Aggiunta spaziatura alla fine dei Ringraziamenti
+  - Aggiunte immagini og- temporanee per i capitoli del Manuale
+  - Aggiunto og-desc a tutti i capitoli del Manuale
+  - Aggiunto riassunto a voci indice
+  - Aggiunta immagine og- a Istruzioni Iterative.
+
+## 0.30.28 (December 02, 2021)
+  - Modificata l'immagine per Istruzioni Condizionali
+  - Iniziata revisione delle note della mappa mentale
+  - Aggiunti dati og- a capitolo sulle istruzioni condizionali
+  - Aggiunti dati og a capitolo Funzioni
+  - Modificata immagine og per Memoria
+  - Modificata immagine og per Memoria
+
+## 0.30.27 (November 24, 2021)
+  - Aggiunta immagine og a capitolo Preprocessore
+
+## 0.30.26 (November 24, 2021)
+  - Aggiunti dati og- a capitolo sugli Operatori
+  - Aggiunta immagine og a Struttura dei Programmi
+
+## 0.30.25 (November 21, 2021)
+  - Merge branch 'capitolo/commenti' into redazione
+  - Esteso il testo della dottrina del capitolo sui Commenti
+
+## 0.30.24 (November 21, 2021)
+  - Corretti rimandi alle note
+  - Aggiunta immagine og a Sostiene Aristotele
+  - Rigenerati file con URL corretta
+  - Aggiunta immagine og a Tipi di Dato
+  - Corretto errore su nebulose WR
+  - Corretti errori nei salvataggi
+  - Modificata immagine og per capitolo Commenti
+
+## 0.30.23 (November 20, 2021)
+  - Aggiunta immagine og al capitolo sui Commenti
+
+## 0.30.22 (November 17, 2021)
+  - Aggiunta immagine og a C++ e corretto errore nella nota finale
+
+## 0.30.21 (November 16, 2021)
+  - Aggiunti dati og- al capitolo sui linguaggi di programmazione
+  - Aggiunta og-image a Proposta
+  - Rivista la descrizione del Manuale nel file README
+
+## 0.30.20 (November 14, 2021)
+  - Rivisto il testo del README
+  - Rivisto il testo del MANIFEST
+  - Rivisto il testo della Bibliografia
+  - Modificato link a C'hi nell'articolo su Religione e Scienza
+
+## 0.30.19 (November 14, 2021)
+  - Corretto link mancante nell'HEAD
+  - Revisione dell'articolo su Religione e Scienza
+
+## 0.30.18 (November 12, 2021)
+  - Aggiunta immagine og a Sistemi di Numerazione
+
+## 0.30.17 (November 11, 2021)
+  - Aggiunta og-image per capitolo Programmatore
+  - Rivisto il testo di Religione e Scienza
+
+## 0.30.16 (November 10, 2021)
+  - Riorganizzata la pagina dei post
+  - Corretto tempo verbale in Bibliografia
+  - Rimossa citazione dalla bibliografia
+  - Aggiute og-img a Mitopoietica e Bibliografia
+  - Corretto testo della Bibliografia
+
+## 0.30.15 (November 07, 2021)
+  - Spostata bibliografia nel manuale. 
+  - Aggiunto ringraziamento a Luciano
+  - Revisione del testo della bibliografia
+  - Completata prima stesura della bibilografia
+
+## 0.30.14 (November 07, 2021)
+  - Aggiunta og-image per Incipit
+  - Corretto errore nell'HEAD
+  - Aggiunto excerpt a Memoria
+  - Aggiunta URL pagina nell'HEAD
+  - Rivista gestione HEAD
+
+## 0.30.13 (November 05, 2021)
+  - Aggiornati i link Indietro delle note
+  - Modificato lo stile del link Indietro delle note
+  - Aggiunta immagine per la testata della pagina Facebook
+
+## 0.30.12 (November 04, 2021)
+  - Revisione del capitolo sulla Memoria
+  - Cambiato il tempo verbale nell'Index :-)
+
 ## 0.30.11 (November 01, 2021)
   - Aggiunto Sostiene Aristotele come post e corretti i link nel testo
   - Rinominata directory _var in _note. A

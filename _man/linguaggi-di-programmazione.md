@@ -1,11 +1,12 @@
 ---
-status:     pubblicato
-layout:     manuale
 class:      capitolo
-index:      6
-title:      I linguaggi di programmazione
+layout:     manuale
+og_desc:    "Cosa disse Brian Kernigan - Un computer è come una nave - Come tornare al tuo albergo in Cina - I paradossi sono la crittografia di Dio - PacMan non paga le tasse."
+og_img:     "/assets/img/og-img/linguaggi-di-programmazione.jpg"
 permalink:  /man/linguaggi-di-programmazione
 quote:      "Dio non programma in Assembler con l'Universo"
+status:     pubblicato
+title:      I linguaggi di programmazione
 ---
 
 Brian Kernigan, disse:
@@ -35,7 +36,7 @@ I linguaggi di programmazione fanno precisamente questo: traducono le nostre ric
 
 Il linguaggi di programmazione possono essere di *alto livello* o di *basso livello*.
 I linguaggi di alto livello, come il *C* o il *C++* hanno dei costrutti simili al linguaggio naturale e non sono legati a una determinata architettura hardware.
-I linguaggi di basso livello, come l'*assembly* hanno dei costrutti simili al codice nativo della macchina e sono, per questo motivo, legati a una specifica architettura hardware.   
+I linguaggi di basso livello, come l'*assembly* hanno dei costrutti simili al codice nativo della macchina e sono, per questo motivo, legati a uno specifico tipo di hardware.   
 La funzione *raddoppia*, che abbiamo visto prima, tradotta in linguaggio *assembly*, diventa:
 
 ```
@@ -94,8 +95,7 @@ Invertendo questi concetti, una volta il Maestro Canaro disse:
 
 ---
 
-Noi percepiamo il mondo reale come un insieme di eventi che coinvolgono
-una o più entità.
+Noi percepiamo il mondo reale come un insieme di eventi che coinvolgono una o più entità.
 Ciascuna entità è identificabile per le sue caratteristiche fisiche e ha un suo modo particolare di reagire agli stimoli esterni.
 Per descrivere le entità, i linguaggi di programmazione hanno i 
 <a href="/man/tipi-di-dato" class="xref">tipi di dato</a>; 
@@ -105,21 +105,12 @@ Un linguaggio di programmazione è tanto più efficace quanto più i suoi tipi d
 Ci sono molti linguaggi di programmazione.
 Ciascun linguaggio sa spiegare bene certe cose e meno bene certe altre.
 Esistono linguaggi che descrivono bene le transazioni bancarie, ma che sono inadatti a gestire il traffico aereo; altri che funzionano molto bene per creare pagine Web, ma con cui sarebbe masochistico scrivere un sistema operativo. 
-Un programmatore che conosce a fondo un certo linguaggio di
-programmazione può utilizzarlo efficacemente per scrivere qualsiasi
-programma, ma a quale prezzo?
-Se il linguaggio di programmazione è inadatto a descrivere gli eventi
-che interesseranno il programma, il programmatore dovrà preoccuparsi di
-piegare o gli eventi o il linguaggio o entrambi per ottenere il
-risultato atteso.
-Scegliendo invece un linguaggio i cui tipi di dato e i cui costrutti
-siano più affini alla realtà da descrivere, si risparmiano tempo e
-fatica e si scrive un codice più affidabile.  
+Un programmatore che conosce a fondo un certo linguaggio di programmazione può utilizzarlo efficacemente per scrivere qualsiasi programma, ma a quale prezzo?
+Se il linguaggio di programmazione è inadatto a descrivere gli eventi che interesseranno il programma, il programmatore dovrà preoccuparsi di piegare o gli eventi o il linguaggio o entrambi per ottenere il risultato atteso.
+Scegliendo invece un linguaggio i cui tipi di dato e i cui costrutti siano più affini alla realtà da descrivere, si risparmiano tempo e fatica e si scrive un codice più affidabile.  
 I linguaggi di programmazione possono essere di due tipi: *interpretati* o *compilati*.
 Posso spiegarti la differenza in questo modo: immagina di essere in Cina e di dover tornare al tuo albergo in taxi.
-Se non parli il Cinese, ha due possibilità: o porti con te un interprete che
-spieghi al tassista dove devi andare o ti fai dare dall'albergo un foglio di
-carta con l'indirizzo e lo fai vedere al guidatore del taxi.
+Se non parli il Cinese, ha due possibilità: o porti con te un interprete che spieghi al tassista dove devi andare o ti fai dare dall'albergo un foglio di carta con l'indirizzo e lo fai vedere al guidatore del taxi.
 Entrambe le possibilità hanno lati positivi e negativi.
 Se scegli di portarti dietro un interprete avrai dei costi in più, ma sarai libero di andare dove vuoi: in albergo, in un ristorante o in un locale notturno.
 Se invece opti per il foglio con l'indirizzo risparmierai i soldi dell'interprete, ma, una volta salito in taxi, potrai solo tornare all'albergo.  
@@ -136,8 +127,7 @@ Anche le religioni, come i linguaggi di programmazione, possono essere o compila
 
 ---
 
-Tutti i linguaggi hanno una sintassi, tutti i linguaggi hanno dei tipi
-di dato; pochissimi linguaggi hanno anche dei principii.
+Tutti i linguaggi hanno una sintassi, tutti i linguaggi hanno dei tipi di dato; pochissimi linguaggi hanno anche dei principii.
 I principii sono importanti, perché danno robustezza al linguaggio.
 Il linguaggio C, da cui è derivato il C++, non ha principii: è solo un modo per descrivere gli eventi all'interno di un computer.  
 L'istruzione:
@@ -274,8 +264,7 @@ Se domani smettessimo di utilizzare i computer, i costrutti che il C++ ha eredit
 <a href="/man/classi-oggetti" class="xref">classe e di oggetto</a> 
 resterebbero ancora validi.  
 Molti pensano che avere dei principii sia limitativo, ma non è vero. 
-Il C non ha principi e i suoi costrutti sono limitati ai tipi di dato
-previsti.
+Il C non ha principi e i suoi costrutti sono limitati ai tipi di dato previsti.
 Il C++, grazie ai suoi principii, ha una maggior duttilità e può evolversi, adattando i suoi costrutti a qualsiasi contesto.  
 Il Maestro Canaro pensava che la Scienza fosse come il C: uno strumento perfetto per descrivere ciò che ci circonda, ma inadatto a descrivere ciò che trascende la nostra conoscenza diretta.
 Il problema, secondo lui, era la matematica.
@@ -283,7 +272,28 @@ Parafrasando Karl Kraus, diceva che la matematica è una malattia di cui pensa d
 Non so se conosci la frase di André Weil: «Dio esiste perché la matematica è coerente; il Diavolo esiste perché non possiamo dimostrarlo.»
 È vero il contrario.
 I paradossi sono la crittografia di Dio e la matematica è utile non perché quasi sempre è coerente, ma perché, di quando in quando, produce dei paradossi.  
+Le filosofie occidentali cercano di sfuggire il paradosso; lo Zen, al contrario, lo cerca incessantemente.
+È possibile che sia il paradosso, la chiave per arrivare alla Verità?
+O anche: è possibile che non si possa arrivare alla Verità, se non si accetta il paradosso?
+Del resto: perché il mondo di Dio, la sua visione delle cose, non dovrebbe essere paradossale, per noi?
+Se mostrassimo al personaggio bidimensionale di un gioco per computer il nostro mondo tridimensionale, non lo troverebbe paradossale?
+E se spiegassimo a *PacMan* che dobbiamo pagare l'IVA, non lo troverebbe paradossale?  
+Un'altra ipotesi è che il paradosso indichi il punto di confine fra il nostro sistema e un sistema di ordine superiore. 
+Potrebbe essere, cioè, che nel nostro sistema ci siano degli elementi “di frontiera” che segnano il confine fra il nostro sistema e un altro e che per questa loro ambivalenza non possono essere spiegati compiutamente con gli elementi a nostra disposizione. 
+Il Tempo non si può definire senza una tautologia; definire la Verità comporta una ricorsione.. 
+È la nostra corda, che è ancora troppo corta, o è piuttosto il pozzo, che non ha fondo, almeno in questo Universo)?
+
 
 <hr id="dottrina">
 
 {{ site.data.canaro.arco-meglio }}
+
+<!--
+Un codice crittografico che produca un solo risultato può essere più o meno sicuro, ma, una volta de-crittato, non può fare a  meno di rivelare il proprio segreto.
+Al contrario, un codice crittografico che possa produrre più di un risultato credibile, è di fatto molto più sicuro perché il decrittatore non potrebbe mai avere la certezza di essere nel giusto.
+Se uno stesso brano crittografato potesse produrre le frasi: "Le navi attaccheranno da est" e "Gli aereo attaccheranno da ovest", anche decrittato, avrebbe comunque il pregio di dividere le forze del decrittatore sui due fronti, uno solo dei quali sarà veramente attaccato.
+Dio si comporta allo stesso modo: "cifra" le grandi verità con dei paradossi ambivalenti e distrae così, talvolta per millennii, i filosofi.
+
+Un linguaggio, può descrivere sé stesso senza essere tautologico?
+Ovvero: i costrutti di un linguaggio, possono descrivere i costrutti del linguaggio senza dire che sono costrutti del linguaggio?
+-->

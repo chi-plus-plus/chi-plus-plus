@@ -1,10 +1,12 @@
 ---
-status:     pubblicato
-layout:     manuale
 class:      capitolo
-title:      I sistemi di numerazione
+layout:     manuale
+og_desc:    "Come contano gli alieni esadattili - Gli antichi Romani e lo zero - L'empietà del sistema ternario bilanciato - La codifica RGB - Quanti sono i fiammiferi."
+og_img:     "/assets/img/og-img/sistemi-di-numerazione.jpg"
 permalink:  /man/sistemi-di-numerazione
 quote:      "Ci sono 10 tipi di persone: quelli che capiscono la numerazione binaria e quelli che non la capiscono"
+status:     pubblicato
+title:      "I sistemi di numerazione"
 ---
 
 Per dissuadere i pochi ostinati che sono arrivati a leggere fin qui, voglio parlarti dei sistemi di numerazione.
@@ -236,4 +238,15 @@ I numeri li abbiamo inventati noi, i valori, no.
  
 <!--
 @todo - aggiungere note su geometria e matematica
+
+ciascun tipo di dato non esiste in sé, ma è solo una convenzione.
+un char corrisponde a un byte; un intero a due byte e un double a quattro o più byte.
+insistere sul fatto che ciascun costrutto del C++ non è che un modo di vedere la memoria (v. operatori).
+Lo stesso concetto deve essere anticipato nel capitolo dedicato ai sistemi di calcolo, specificando che la notazione ottale o esadecimale sono solo modi diversi di descrivere una stessa quantità.
+Qualcosa di simile deve essere detto anche a proposito delle operazioni sui dati.
+L'addizione, la sottrazione e tutte le operazioni matematiche sono solo delle convenzioni, un modo di identificare un determinato "fenomeno naturale" che era valido milioni di anni prima che gli uomini apparissero sulla Terra e che lo sarà anche dopo che saranno scomparsi.
+Fare l'esempio della forza di gravità, che esisteva da prima di Newton e che sopravviverà anche al nostro Pianeta.
+Se possibile, utilizzare come esempio le "regole di business" elencate nella mitopojesi (di mamma ce n'è una sola, l'acqua va verso il bassso, ecc.) ; leggi decise in fase di analisi, che sono vere indipendentemente dall'implementazione.
+
+
 -->

@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html lang="it-IT"><head>
+<html lang="it-IT">
+
+
+
+
+
+<head>
     <title>Le funzioni |  C'hi++
 </title>
     <meta charset="utf-8" />
-    <meta name="viewport"     content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
-    <link rel="canonical"            href="http://localhost:4000" />
-    <meta     name="thumbnail"       content="http://localhost:4000/assets/img/chi-plus-plus.png" />
+    <link      rel="canonical"          href="https://chiplusplus.org/man/funzioni" />
+    <link      rel=icon                 href="https://chiplusplus.org/assets/img/favicon.ico" type=image/x-icon />
+    <link      rel="stylesheet"         href="https://chiplusplus.org/assets/fa/css/all.css" /> 
+    <link      rel="stylesheet"         href="https://chiplusplus.org/assets/css/screen.css" />        
+    <meta     name="viewport"        content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta     name="thumbnail"       content="https://chiplusplus.org/assets/img/chi-plus-plus.jpg" />
     <meta     name="keyword"         content="C'hi, C++, c plus plus, religione, open-source" />
     <meta     name="description"     content="Chi++ - Proposta per una metafisica open-source" />
-    <meta property="og:title"        content="Le funzioni" />
+    <meta property="og:url"          content="https://chiplusplus.org/man/funzioni" />    
     <meta property="og:type"         content="website" />    
-    <meta property="og:description"  content="Chi++ - Proposta per una metafisica open-source" />
-    <meta property="og:image"        content="http://localhost:4000/assets/img/chi-plus-plus.png" />
-    <meta property="og:image:height" content="260" />
-    <link rel=icon href=/assets/img/favicon.ico type=image/x-icon>
-    <link href="/assets/fa/css/all.css" rel="stylesheet"> 
-    <link rel="stylesheet" href="/assets/css/screen.css" ><script>
+    <meta property="og:title"        content="Le funzioni" />
+    <meta property="og:description"  content="Un suggerimento di Jacopone da Todi - Il problema dei romanzi - Le regole di vita di Myamoto Musashi - La Verità è una modella - La Via del carpentiere." />
+    <meta property="og:image:width"  content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image"        content="https://chiplusplus.org/assets/img/og-img/funzioni.jpg" />
+    <meta property="fb:app_id"       content="" /><script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -401,7 +410,7 @@ src/cpp/funzioni-limiti-main.cpp:23:25: error: expected '(' for function-style c
 </code></pre>
 
 <p>Questo avviene perché i <code>template</code> non sono vere funzioni, ma solo degli schemi che il compilatore utilizza per generare la versione corretta del codice.
-La dichiarazione delle funzioni template, quindi deve comprendere anche la loro definizione, per dare modo al compilatore di gestire appropriatamente la chiamata<a class="nota" href="/man/note#template"></a>.</p>
+La dichiarazione delle funzioni template, quindi deve comprendere anche la loro definizione, per dare modo al compilatore di gestire appropriatamente la chiamata<a class="nota" href="/man/note#template" id="template"></a>.</p>
 
 <hr id="inline" />
 
@@ -621,7 +630,7 @@ int main(int argc, char** argv)
 <p>L’esistenza di una funzione <code>inline</code> ricorda un po’ un passo del <i>Samyutta Nikaya</i>:</p>
 
 <blockquote>
-  <p>Non esiste distinzione fra un essere, la sua funzione e il tempo della sua apparizione. Gli esseri appaiono dalla non-esistenza, esistono per un istante e poi cessano di esistere. La loro esistenza, attività e azione sono un’unica cosa. Passato e futuro sono meri nomi.<a class="nota" href="/man/note#samyutta"></a></p>
+  <p>Non esiste distinzione fra un essere, la sua funzione e il tempo della sua apparizione. Gli esseri appaiono dalla non-esistenza, esistono per un istante e poi cessano di esistere. La loro esistenza, attività e azione sono un’unica cosa. Passato e futuro sono meri nomi.<a class="nota" href="/man/note#samyutta" id="samyutta"></a></p>
 </blockquote>
 
 <p>In generale, comunque, il ciclo di vita di una funzione prevede tre fasi distinte: la <em>dichiarazione</em>, la <em>definizione</em> e il suo successivo utilizzo:</p>
@@ -1041,7 +1050,7 @@ long fattoriale(int n)
 </code></pre>
 
 <p>Attenzione, però: una funzione che richiama sé stessa, se non è scritta bene, può generare una ricorsione in[de]finita, come due specchi posti l’uno di fronte all’altro.
-Lo spazio prospettico all’interno degli specchi è inesauribile, ma la memoria dei computer, per quanto estesa, ha i suoi limiti e un numero eccessivo di ricorsioni potrebbe generare uno <em>stack overflow</em>.<a href="/man/note#stack" class="nota"></a> 
+Lo spazio prospettico all’interno degli specchi è inesauribile, ma la memoria dei computer, per quanto estesa, ha i suoi limiti e un numero eccessivo di ricorsioni potrebbe generare uno <em>stack overflow</em>.<a href="/man/note#stack" class="nota" id="stack"></a> 
 Per questo motivo, bisogna ricorrere alla ricorsione solo nei casi in cui è indispensabile, preferendole, quando possibile, le <a href="https://chiplusplus.org/man/istruzioni-iterative">istruzioni iterative</a> e applicando sempre dei meccanismi di controllo della profondità di ricorsione che prevengano un sovraccarico dello stack.<br />
 Un altro tipo di ricorsione di cui diffidare è quella con cui si cerca, alle volte, di dare credibilità a una convinzione priva di fondamenti reali utilizzando un’altra convinzione simile.</p>
 
@@ -1050,7 +1059,7 @@ Un altro tipo di ricorsione di cui diffidare è quella con cui si cerca, alle vo
 <p>In un romanzo sulla vita dello spadaccino giapponese Myamoto Musashi c’è una frase che è la logica conseguenza del suggerimento di Jacopone da Todi:</p>
 
 <blockquote>
-  <p>Non bisogna interferire nel funzionamento dell’Universo, ma prima è necessario capire quale sia, il funzionamento dell’Universo<a href="/man/note/#musashi" class="nota"></a></p>
+  <p>Non bisogna interferire nel funzionamento dell’Universo, ma prima è necessario capire quale sia, il funzionamento dell’Universo<a href="/man/note#musashi" class="nota" id="musashi"></a></p>
 </blockquote>
 
 <p>Il problema dei romanzi è che ti dicono spesso cosa fare, ma non ti spiegano quasi mai come farlo, o perché.<br />
@@ -1080,7 +1089,7 @@ Nel <em>Libro dei Cinque Anelli</em>, diede ai suoi discepoli nove regole di vit
 </li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></li></ul>
 </blockquote>
 
-<p>Queste regole, che hanno permesso a Musashi di arrivare alla venerabile età di sessant’anni<a href="/man/note/#eta" class="nota"></a>, dopo essere sopravvissuto vittorioso ad altrettanti combattimenti con tutti i migliori spadaccini del suo tempo, possono aiutarti a capire quale sia il funzionamento dell’Universo e cosa fare per non perturbarlo.<br />
+<p>Queste regole, che hanno permesso a Musashi di arrivare alla venerabile età di sessant’anni<a href="/man/note#eta" class="nota" id="eta"></a>, dopo essere sopravvissuto vittorioso ad altrettanti combattimenti con tutti i migliori spadaccini del suo tempo, possono aiutarti a capire quale sia il funzionamento dell’Universo e cosa fare per non perturbarlo.<br />
 La pratica delle arti, siano esse intellettuali o marziali, e la conoscenza dei mestieri, unite all’attenzione per tutto ciò che ti circonda, aumenteranno il tuo bagaglio di esperienza e ti permetteranno di distinguere i pro e i contro di ogni situazione.
 Questo ti libererà dal demone dell’invidia, perché imparerai che tutte le  condizioni, anche quelle apparentemente idilliache, hanno dei lati negativi.
 Il passo successivo sarà affrancarsi dal desiderio e dall’attaccamento alle cose: così come la funzione <code>log</code> ha bisogno di sapere quali siano i parametri fissi e quali siano quelli variabili, tu dovrai imparare a distinguere i tuoi desiderii dalle tue necessità, per sfuggire all’influsso dell’Annosa Dicotomia.<br />
@@ -1108,7 +1117,7 @@ Musashi dice di prestare attenzione anche alle cose insignificanti, Nan-in e Ten
 Questo, per esempio, è il parallelo che lui fa fra lo stratega e il carpentiere:</p>
 
 <blockquote>
-  <p>Per edificare una casa è necessaria un’accurata scelta dei materiali. Per i pilastri esterni si sceglieranno dei tronchi diritti e senza  nodi, mentre per quelli interni si possono usare dei tronchi diritti  con qualche piccolo difetto. Per le soglie, gli architravi, gli infissi e  le porte scorrevoli si useranno i legni migliori per l’aspetto, anche  se non sono troppo robusti, e così via. Per le parti strutturali non è  importante l’aspetto estetico quanto la robustezza. Il legname meno pregiato e con molti nodi viene invece utilizzato per i ponteggi e, alla fine, viene bruciato.<a href="/man/note/#5anelli" class="nota"></a></p>
+  <p>Per edificare una casa è necessaria un’accurata scelta dei materiali. Per i pilastri esterni si sceglieranno dei tronchi diritti e senza  nodi, mentre per quelli interni si possono usare dei tronchi diritti  con qualche piccolo difetto. Per le soglie, gli architravi, gli infissi e  le porte scorrevoli si useranno i legni migliori per l’aspetto, anche  se non sono troppo robusti, e così via. Per le parti strutturali non è  importante l’aspetto estetico quanto la robustezza. Il legname meno pregiato e con molti nodi viene invece utilizzato per i ponteggi e, alla fine, viene bruciato.<a href="/man/note#5anelli" class="nota" id="5anelli"></a></p>
 </blockquote>
 
 <p>Ciò che è vero per il carpentiere, cambiando il punto di vista, è vero anche per lo stratega e potrà esserlo anche per te, se ti troverai ai gestire un progetto o un gruppo di lavoro.
@@ -1117,14 +1126,6 @@ Dovrai essere capace di identificare i malfunzionamenti anche se non hanno effet
 Cambiano i nomi, perché sono passati quattro secoli, ma i problemi restano gli stessi, così come le soluzioni.<br />
 Del resto, arte, scienza, filosofia e religione sono tutti tentativi di dare una risposta alle stesse domande sulla nostra esistenza. 
 Dato che l’oggetto di studio è lo stesso, è più che normale che, alle volte, le risposte si somiglino, allo stesso modo in cui l’algoritmo per il calcolo del fattoriale di un numero sarà più o meno lo stesso, indipendentemente dal linguaggio di programmazione.</p>
-
-<!--
-
-@todo: aggiungere i 10C rivisti dal Maestro Canaro
-specificare che quando aveva redatto la prima versione era un "angy young man", come direbbe Santillana, ma che poi aveva capito che le religioni sono come le opere teatrali e non le si può giudicare in base alle capacità degli attori.
-
-
--->
 
             </section>
         

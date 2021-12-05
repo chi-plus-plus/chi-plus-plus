@@ -1,11 +1,15 @@
 ---
-status:     pubblicato
-layout:     manuale
 class:      capitolo
-title:      L'ereditarietà
+layout:     manuale
+og_desc:    "Il Karma delle funzioni virtuali - La Scienza è transeunte; il Mito è immortale - Perché 13 e 17 portano sfortuna - Cos'è l'Arte - Le regole dell'Ikebarba"
+og_img:     "/assets/img/og-img/ereditarieta.jpg"
 permalink:  /man/ereditarieta
-quote:      "We few, we happy few<br />We bunch of data"
+quote:      "Una classe ma può ripudiare una classe figlia, se è cattiva, ma una casse figlia non può ripudiare la sua classe padre perché gli deve più di quanto non sia in grado di pagargli e in particolare gli deve l'esistenza."
+status:     pubblicato
+title:      L'ereditarietà
 ---
+
+<!-- Etica Nicomachea 1163b -->
 
 L'ereditariaretà, ovvero la possibilità di creare delle genealogie di classi, è la caratteristica principale del C++.
 
@@ -483,7 +487,7 @@ Io, qui, ora, con il mio naso la mia bocca e i miei capelli, ti sto insegnando c
 Molto probabilmente abbiamo già avuto questa conversazione in passato e la faremo ancora in futuro.
 Forse non useremo le stesse parole; forse avremo nomi differenti, forse tu sarai il maestro e io l'allievo, ma la nostra amicizia sarà la stessa, perché quella fa parte della dichiarazione della nostra classe; non può e non deve mutare.
 
-> {{site.data.citazioni.santillana.mito}} <a class="nota" href="/man note#miti"></a>
+> {{site.data.citazioni.mulino-amleto.mito}} <a class="nota" href="/man/note#miti" id="miti"></a>
 
 Ogni epoca ha i suoi eroi e i suoi demoni; la memoria delle loro battaglie, genera il mito.  
 La Scienza è transeunte: abbiamo poche notizie riguardo le conoscenze scientifiche dei popoli del passato<!-- esempi? -->, mentre conosciamo bene i loro miti, perché il mito è immortale; la Scienza no, a meno che non sia assorbita dal mito e trasformata in leggenda o superstizione.
@@ -496,12 +500,12 @@ L'arte è il motore del mito.
 Un motore che si auto-alimenta, come il Sole, perché si nutre di eventi epici e li genera a sua volta ispirando gli eroi a imprese degne di memoria.  
 La parola *arte*, così come: *amore*, del resto, è una di quelle parole che le gente utilizza spesso ma di cui non viene mai data una definizione precisa, perché le si ritiene dei concetti auto-esplicativi che non occorre definire. 
 È sbagliato: come abbiamo visto, tutte le parole, anche quelle più comuni, possono essere interpretate in maniera differente.
-In <a href="https://canaro.net/amore-e-arte" target="canaro">un suo saggio giovanile su Amore e Arte</a>, il Maestro Canaro scrisse che:
+In <a href="https://canaro.net/saggi/amore-e-arte.html" target="canaro">un suo saggio giovanile su Amore e Arte</a>, il Maestro Canaro scrisse che:
  
  > L'Arte è la traccia del cammino dell'Uomo verso Dio 
  
  specificando poi che, con il termine: “Dio” (altra parola interpretata in maniera differente da ciascuno di noi), intendeva il senso dell'Esistenza.
-Alcuni anni dopo, però, guardando delle foto di crostate realizzate dallo chef Gianluca Fusto<a href="/man/note/#fusto" class="nota"></a>, capì che la sua definizione era imperfetta, perché non includeva, o quanto meno lasciava a margine, gli arte-fatti che non ricadevano nelle categorie artistiche canoniche. 
+Alcuni anni dopo, però, guardando delle foto di crostate realizzate dallo chef Gianluca Fusto<a class="nota" href="/man/note#fusto" id="fusto"></a>, capì che la sua definizione era imperfetta, perché non includeva, o quanto meno lasciava a margine, gli arte-fatti che non ricadevano nelle categorie artistiche canoniche. 
 Modificò per ciò la sua definizione di Arte in:
 
 > L'Arte è la traccia del cammino dell'Uomo verso la Perfezione
@@ -514,7 +518,7 @@ I principii dell'Ikebarba, così come li formulò il Maestro Canaro, sono:
 
 <blockquote>
 <p>
-<b>L'Ikebarba è fatta per l'uomo, non l'uomo per l'Ikebarba<a href="/man/note#shabbat" class="nota"></a>.</b>  
+<b>L'Ikebarba è fatta per l'uomo, non l'uomo per l'Ikebarba<a class="nota" href="/man/note#shabbat" id="shabbat"></a>.</b>  
 L'Ikebarba non deve essere un peso per chi la pratica, ma un obbligo giojoso.
 I panni devono comunque essere messi ad asciugare; il tempo necessario a farlo in maniera sciatta o consapevole è pressocché lo stesso, ma un'Ikebarba ben fatta provvederà panni asciutti in minor tempo e renderà la vista dello stendipanni meno fastidiosa.
 </p>

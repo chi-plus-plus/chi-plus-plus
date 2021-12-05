@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html lang="it-IT"><head>
+<html lang="it-IT">
+
+
+
+
+
+<head>
     <title>Gli operatori |  C'hi++
 </title>
     <meta charset="utf-8" />
-    <meta name="viewport"     content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
-    <link rel="canonical"            href="http://localhost:4000" />
-    <meta     name="thumbnail"       content="http://localhost:4000/assets/img/chi-plus-plus.png" />
+    <link      rel="canonical"          href="https://chiplusplus.org/man/operatori" />
+    <link      rel=icon                 href="https://chiplusplus.org/assets/img/favicon.ico" type=image/x-icon />
+    <link      rel="stylesheet"         href="https://chiplusplus.org/assets/fa/css/all.css" /> 
+    <link      rel="stylesheet"         href="https://chiplusplus.org/assets/css/screen.css" />        
+    <meta     name="viewport"        content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta     name="thumbnail"       content="https://chiplusplus.org/assets/img/chi-plus-plus.jpg" />
     <meta     name="keyword"         content="C'hi, C++, c plus plus, religione, open-source" />
     <meta     name="description"     content="Chi++ - Proposta per una metafisica open-source" />
-    <meta property="og:title"        content="Gli operatori" />
+    <meta property="og:url"          content="https://chiplusplus.org/man/operatori" />    
     <meta property="og:type"         content="website" />    
-    <meta property="og:description"  content="Chi++ - Proposta per una metafisica open-source" />
-    <meta property="og:image"        content="http://localhost:4000/assets/img/chi-plus-plus.png" />
-    <meta property="og:image:height" content="260" />
-    <link rel=icon href=/assets/img/favicon.ico type=image/x-icon>
-    <link href="/assets/fa/css/all.css" rel="stylesheet"> 
-    <link rel="stylesheet" href="/assets/css/screen.css" ><script>
+    <meta property="og:title"        content="Gli operatori" />
+    <meta property="og:description"  content="I concetti di vero e di falso sono frutto di un arbitrio - William James ha ragione - Fama, successo e prestigio - Le certification authority etiche - Affinità fra le persone per bene e i malandrini." />
+    <meta property="og:image:width"  content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image"        content="https://chiplusplus.org/assets/img/og-img/operatori.jpg" />
+    <meta property="fb:app_id"       content="" /><script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -219,7 +228,7 @@ post-decremento:8
 L’operatore <code>==</code> torna <code>true</code> se gli operandi sono uguali, come nel verso:</p>
 
 <blockquote>
-  <p>Io vidi il mio Signore con l’occhio del cuore.<br />Gli chiesi: Chi sei?<br />Rispose: Te! <a href="/man/note#attar" class="nota"></a></p>
+  <p>Io vidi il mio Signore con l’occhio del cuore.<br />Gli chiesi: Chi sei?<br />Rispose: Te! <a class="nota" href="/man/note#attar" id="attar"></a></p>
 </blockquote>
 
 <p>L’operatore <code>!=</code> torna <code>true</code> se gli operandi non sono uguali; gli operatori <code>&gt;</code> e <code>&lt;</code> tornano <code>true</code>, rispettivamente, se l’operatore a sinistra è maggiore o minore dell’operando a destra; gli operatori <code>&gt;=</code> e <code>&lt;=</code> tornano <code>true</code> se l’operando a sinistra è maggiore o uguale oppure minore o uguale a quello a destra.<br />
@@ -650,7 +659,7 @@ Stringa globale
 Per i filosofi è <em>vero</em> tutto ciò che può essere descritto con le parole; per gli scienziati, tutto ciò che può essere descritto dalla matematica; per gli informatici è <em>vero</em> tutto quello che può essere descritto dal codice. 
 <!-- v. Kant citato da Hertha von Dechend nella prefazione tedesca a Il Mulino di Amleto -->
 Possiamo definire <em>falso</em> come il contrario di <em>vero</em>, ma non possiamo dedurre o inferire il concetto di <em>vero</em> perché, quale che sia la definizione prescelta, prima di poterla prendere per buona dovremo poterla considerare vera, ma ciò è impossibile perché non sappiamo ancora cosa sia, effettivamente, <em>vero</em>.  <br />
-Bertrand Russell disse che la condizione di <em>vero</em> o di <em>falso</em> è uno stato dell’organismo, determinato da condizioni esterne all’organismo;<a href="/man/note#russell" class="nota"></a> è un’affermazione vera.. o, meglio, <em>valida</em> anche per i computer: i valori booleani <em>vero</em> e <em>falso</em> sono due stati possibili per un’istruzione e spesso dipendono da condizioni esterne all’istruzione stessa, come la presenza di un file o un’azione dell’utente.
+Bertrand Russell disse che la condizione di <em>vero</em> o di <em>falso</em> è uno stato dell’organismo, determinato da condizioni esterne all’organismo;<a class="nota" href="/man/note#russell" id="russell"></a> è un’affermazione vera.. o, meglio, <em>valida</em> anche per i computer: i valori booleani <em>vero</em> e <em>falso</em> sono due stati possibili per un’istruzione e spesso dipendono da condizioni esterne all’istruzione stessa, come la presenza di un file o un’azione dell’utente.
 La cosa interessante è che, anche per i computer, i valori che vengono interpretati come <em>vero</em> e <em>falso</em> sono del tutto arbitrarii e spesso specifici per un dato sistema. 
 Prendi per esempio i programmi che gestiscono le basi di dati: per <em>Access</em>, il valore booleano <em>false</em> è <code>-1</code>; per le prime versioni di <em>MySQL</em> è <code>f</code>; per Postgres o Oracle, è <code>0</code>.<br />
 Il computer non ha <em>in sé</em> il concetto di <em>vero</em> o di <em>falso</em>, ma solo l’associazione dei valori booleani <em>true</em> e <em>false</em> a una determinata sequenza di bit. 
@@ -666,7 +675,7 @@ Prendi la ricchezza, per esempio: si dice che i soldi non danno la felicità ed 
 Comunque, una delle persone più ricche che ho conosciuto non poteva avere figli.
 Possedeva case in diversi Paesi, uno yacht e perfino un aereo personale, ma non poteva avere qualcosa che anche l’uomo più povero della Terra può facilmente ottenere.
 Che senso aveva, la sua ricchezza? Era reale?<br />
-Si definisce: <em>prestigio</em> qualcosa che sembra ciò che non è, come i giochi degli illusionisti, mentre <em>successo</em> non è che il participio passato del verbo <em>succedere</em>: tutto ciò che è avvenuto in passato è, per definizione, “successo”; malgrado ciò, molte persone, sotto l’influsso dell’Annosa Dicotomia, dedicano la propria vita alla ricerca o dell’uno o dell’altro o di entrambi.
+Letteralmente, si definisce: <em>prestigio</em> qualcosa che sembra ciò che non è, come i giochi degli illusionisti, mentre <em>successo</em> non è che il participio passato del verbo <em>succedere</em>: tutto ciò che è avvenuto in passato è, per definizione, “successo”; malgrado ciò, molte persone, sotto l’influsso dell’Annosa Dicotomia, dedicano la propria vita alla ricerca o dell’uno o dell’altro o di entrambi.
 La <em>fama</em> è altrettanto aleatoria: quante persone sono state famose e ora sono dimenticate? 
 Gli inventori della ruota e del fuoco hanno cambiato per sempre la storia della nostra specie e del mondo con le loro scoperte, ma nessuno sa chi siano stati.
 In tempi più recenti, il pittore Giovanni Baglione fu molto famoso, alla fine del sedicesimo Secolo, ma se ci ricordiamo di lui oggi è solo per via dei suoi rapporti con Caravaggio e, comunque, la loro fama terminerà con la nostra specie, insieme a quella di Shakespeare, Leonardo o Einstein.<br />
@@ -683,7 +692,7 @@ Sfortunatamente, però, né i legislatori né i loro certificatori ideologici so
 Mosè, con il sesto Comandamento ancora fresco di stampa, chiese ai figli di Levi:</p>
 
 <blockquote>
-  <p>Ognuno di voi si metta la spada al fianco; percorrete l’accampamento da una porta all’altra di esso, e ciascuno uccida il fratello, ciascuno l’amico, ciascuno il vicino!<a href="/man/note#levi" class="nota"></a></p>
+  <p>Ognuno di voi si metta la spada al fianco; percorrete l’accampamento da una porta all’altra di esso, e ciascuno uccida il fratello, ciascuno l’amico, ciascuno il vicino!<a class="nota" href="/man/note#levi" id="levi"></a></p>
 </blockquote>
 
 <p>Gli Americani, che scrissero:</p>
@@ -700,13 +709,14 @@ I Francesi, il cui motto era:</p>
 </blockquote>
 
 <p>hanno applicato questi principii a colpi di ghigliottina.
-L’ONU, che nel 1948 ha pubblicato la <em>Dichiarazione Universale dei Diritti Umani</em> ha al suo vertice dei Paesi che sono i principali produttori di armi del Mondo<a href="/man/note#armi" class="nota"></a> e che violano costantemente quelle stesse regole da loro promosse.<br />
-Attenzione, però: il fatto che i principii laici di pace, uguaglianza e libertà derivino, in ultima analisi, dalle convinzioni<a href="/man/note#self-evident" class="nota"></a> di un gruppo di credenti<a href="/man/note#credenti" class="nota"></a>, non vuol dire che siano sbagliati, ma che non gli si può attribuire nessuna veridicità oggettiva; possiamo solo accettarli per fede, così come i dogmi religiosi.
+L’ONU, che nel 1948 ha pubblicato la <em>Dichiarazione Universale dei Diritti Umani</em> ha al suo vertice dei Paesi che sono i principali produttori di armi del Mondo<a class="nota" href="/man/note#armi" id="armi"></a> e che violano costantemente quelle stesse regole da loro promosse.<br />
+Attenzione, però: il fatto che i principii laici di pace, uguaglianza e libertà derivino, in ultima analisi, dalle convinzioni<a class="nota" href="/man/note#self-evident" id="self-evident"></a> 
+di un gruppo di credenti<a class="nota" href="/man/note#credenti" id="credenti"></a>, non vuol dire che siano sbagliati, ma che non gli si può attribuire nessuna veridicità oggettiva; possiamo solo accettarli per fede, così come i dogmi religiosi.
 <em>Scegliamo</em> di credere in uno schema di valori, così come potremmo scegliere di credere negli UFO: non abbiamo convinzioni innate, se non l’egoismo.<br />
 Le persone per bene hanno una cosa in comune con i malandrini: pensano che il resto del Mondo sia come loro, ma si sbagliano.
 Noi troviamo condivisibile, quasi pleonastico, che ciascun essere umano abbia diritto alla vita, alla libertà e a una giustizia imparziale, perché siamo stati educati con questi valori, ma qualcuno con un differente livello culturale potrebbe non ritenere queste affermazioni altrettanto evidenti <em>in sé</em>.<br />
-Per gli autori della <em>Dichiarazione di Indipendenza</em> era <em>self-evident</em> che tutti gli uomini fossero stati creati uguali, ma sei Stati del Sud, nelle loro Costituzioni, precisarono che si stava parlando di uomini liberi, non degli schiavi<a href="/man/note#freemen" class="nota"></a>.<br />
-I nazisti utilizzarono le macchine Hollerith per censire e sterminare gli ebrei; furono anche aggiunte delle colonne alle schede perforate per poter gestire i dati relativi alla religione<a href="/man/note#black" class="nota"></a>.
+Per gli autori della <em>Dichiarazione di Indipendenza</em> era <em>self-evident</em> che tutti gli uomini fossero stati creati uguali, ma sei Stati del Sud, nelle loro Costituzioni, precisarono che si stava parlando di uomini liberi, non degli schiavi<a class="nota" href="/man/note#freemen" id="freemen"></a>.<br />
+I nazisti utilizzarono le macchine Hollerith per censire e sterminare gli ebrei; furono anche aggiunte delle colonne alle schede perforate per poter gestire i dati relativi alla religione<a class="nota" href="/man/note#black" id="black"></a>.
 Noi oggi critichiamo sia loro sia chi li aiutò a farlo, ma forse i nostri nipoti criticheranno noi per la tolleranza che abbiamo mostrato nei confronti di chi ci vende il petrolio per le nostre automobili; la stessa tolleranza che loro mostreranno a chi li rifornirà di materie prime per le batterie, o di acqua.</p>
 
 <hr id="comandamenti" />
@@ -729,6 +739,9 @@ Il Maestro Canaro, per esempio, era convinto che il Libro dell’Esodo fosse il 
   </ol>
 </blockquote>
 
+<!--
+specificare che quando aveva redatto la prima versione era un "angy young man", come direbbe Santillana, ma che poi aveva capito che le religioni sono come le opere teatrali e non le si può giudicare in base alle capacità degli attori.
+-->
 <p>Quando gli chiesi perché avesse scelto proprio quelle regole, mi rispose: “Se li avessi seguiti anche da giovane, adesso avrei molti rimorsi in meno.”</p>
 
 <!--

@@ -1,16 +1,21 @@
 ---
-layout:     log
+layout:     post
 title:      "Sostiene Aristotele"
-tags:       [testo, beta]
+tags:       [log, testo, beta]
 permalink:  /sostiene-aristotele.html
+og_img:     "/assets/img/og-img/sostiene-aristotele.jpg"
+og_desc:    "La prima formalizzazione dei principii del C'hi++."
 ---
 
 Sostiene Aristotele (e per fortuna lo sostiene nella sesta pagina de: “La metafisica”, ché se l’avesse sostenuto, che so, a pagina quattrocentosettantadue, chissà se l’avrei mai saputo) che la ricerca della conoscenza, “deve in qualche modo portarci a uno stato contrario a quello nel quale si dà inizio alle ricerche”.
 Ci si meraviglia di qualcosa, se ne indagano le cause e, una volta che le si è scoperte, ciò che prima meravigliava appare come qualcosa di inevitabile.
 L’oggetto di studio, nel caso specifico, è l’Universo.
-Dopo anni di ragionamenti, di letture balzane e di teorie ancora più balzane, sono riuscito a formulare una visione delle cose (mi spiace, ma mi rifiuto di scrivere Weltanschauung) che sembra funzionare piuttosto bene e che, soprattutto, è del tutto indipendente dall’esistenza di una o più Divinità.
+Dopo anni di ragionamenti, di letture balzane e di teorie ancora più balzane, sono riuscito a formulare una visione delle cose (mi spiace, ma mi rifiuto di scrivere: *Weltanschauung*) che sembra funzionare piuttosto bene e che, soprattutto, è del tutto indipendente dall’esistenza di una o più Divinità.
 Perché io ci credo davvero che Dio è la compattificazione di Alexandroff dell’Universo, ovvero un elemento soprannaturale che si introduce nelle “spiegazioni” quando non si sa come rendere conto di qualcosa.
-Sfortunatamente però, rattoppare una cosmogonia zoppicante introducendo il concetto di Dio, porta inevitabilmente a dei paradossi, tipo: se Dio è buono, perché permette il male?
+Sfortunatamente però, rattoppare una cosmogonia zoppicante introducendo il concetto di Dio, porta inevitabilmente a dei paradossi, tipo: 
+
+> Se Dio è buono, perché permette il male?
+  
 Che Dio è, uno che prima mi dice di non ammazzare e poi fa morire di fame o di sete o di stenti centinaia di bambini ogni giorno?
 Le cose sono due: o il male esiste perché Dio non può evitarlo (e allora perché diciamo che è onnipotente?); oppure il male esiste perché Dio non vuole evitarlo (e allora perché diciamo che è buono?).
 Ci sono risposte canoniche a queste domande, ma possono soddisfare giusto l’ascoltatore medio di Radio Maria, io cercavo qualcosa di meglio.
@@ -34,7 +39,7 @@ Questo è stato il dogma più facile da formulare, ma è fondamentale, perché s
 
 **L’Universo si espande.**  
 Questo dogma, se non me l’avessero detto, non l’avrei mai potuto sapere, ma va bene lo stesso.
-Allo stato attuale delle nostre conoscenze, tutto lascia supporre che l’Universo fosse, inizialmente, un’unica cosa che, per ragioni non ancora definite(1), è scoppiata disseminando i suoi pezzi in ogni dove.
+Allo stato attuale delle nostre conoscenze, tutto lascia supporre che l’Universo fosse, inizialmente, un’unica cosa che, per ragioni non ancora definite, è scoppiata disseminando i suoi pezzi in ogni dove.
 I pezzi si sono raggrumati in stelle e pianeti, permettendoci quindi di formulare il..
  
 **Se lasci andare un peso, ti finisce su un piede.**  
